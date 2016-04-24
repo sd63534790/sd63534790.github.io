@@ -4,9 +4,9 @@
   <subtitle>新的开始</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://cyemma.me/"/>
+  <link href="http://sd63534790.coding.me/"/>
   <updated>2016-04-23T03:07:00.603Z</updated>
-  <id>http://cyemma.me/</id>
+  <id>http://sd63534790.coding.me/</id>
   
   <author>
     <name>cheny</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>你好,Hexo!</title>
-    <link href="http://cyemma.me/2016/04/23/HelloWorldHexo/"/>
-    <id>http://cyemma.me/2016/04/23/HelloWorldHexo/</id>
+    <link href="http://sd63534790.coding.me/2016/04/23/HelloWorldHexo/"/>
+    <id>http://sd63534790.coding.me/2016/04/23/HelloWorldHexo/</id>
     <published>2016-04-22T16:43:22.000Z</published>
     <updated>2016-04-23T03:07:00.603Z</updated>
     
@@ -32,10 +32,10 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://cyemma.me/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://sd63534790.coding.me/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://cyemma.me/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://sd63534790.coding.me/tags/Hexo/"/>
     
   </entry>
   
