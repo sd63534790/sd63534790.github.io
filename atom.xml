@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Cheny&#39;s Blog</title>
+  <subtitle>新的开始</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://cyemma.me/"/>
+  <updated>2016-04-23T03:07:00.603Z</updated>
+  <id>http://cyemma.me/</id>
+  
+  <author>
+    <name>cheny</name>
+    <email>44766986@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你好,Hexo!</title>
+    <link href="http://cyemma.me/2016/04/23/HelloWorldHexo/"/>
+    <id>http://cyemma.me/2016/04/23/HelloWorldHexo/</id>
+    <published>2016-04-22T16:43:22.000Z</published>
+    <updated>2016-04-23T03:07:00.603Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;一个星期前,在公司无所事事,偶然的机会看到了&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzA4NTQwNDcyMA==&amp;amp;mid=402564613&amp;amp;idx=1&amp;amp;sn=d2b7c75b11046a0dcf8df77e737d2b4c#rd&quot; title=&quot;我为什么要写博客&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;我为什么要写博客&lt;/a&gt;的文章，突然心血来潮，决定尝试开始试着写写博客。&lt;/p&gt;
+&lt;h1 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h1&gt;&lt;p&gt;有了这个念头,我试着开始寻找比较好的平台，首先想到的就是CSDN，但我觉得在CSDN上写博客用户体验的感觉太差，一堆广告不说，逼格还是太低哈，之后又看到了简书,感觉也没有吸引到我,就在前几天,看到了Hexo基于Node的框架，速度快，样式选择多，逼格高，于是利用Hexo搭建了自己的博客,如果现在你要是想搭建自己的博客，我推荐用Hexo。   &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;一个星期前,在公司无所事事,偶然的机会看到了&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzA4NTQ
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://cyemma.me/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://cyemma.me/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
