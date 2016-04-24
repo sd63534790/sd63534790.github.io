@@ -84,13 +84,13 @@
 
 <meta name="description" content="做一个简单快乐的人">
 <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
+<meta property="og:title" content="标签">
 <meta property="og:url" content="http://www.cyemma.me/tags/index.html">
 <meta property="og:site_name" content="Cheny's Blog">
 <meta property="og:description" content="做一个简单快乐的人">
-<meta property="og:updated_time" content="2016-04-22T15:32:05.710Z">
+<meta property="og:updated_time" content="2016-04-24T14:40:06.056Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="标签">
 <meta name="twitter:description" content="做一个简单快乐的人">
 
 
@@ -113,7 +113,7 @@
   
 
   
-    tags | Cheny's Blog
+    标签 | Cheny's Blog
   
 </title>
 </head>
@@ -227,7 +227,14 @@
   <div id="posts" class="posts-expand">
     
     
-      
+      <div class="tag-cloud">
+        <div class="tag-cloud-title">
+            目前共计 1 个标签
+        </div>
+        <div class="tag-cloud-tags">
+          <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a>
+        </div>
+      </div>
     
   </div>
 
@@ -243,7 +250,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="tags/index.html"
-           data-title="tags" data-url="http://www.cyemma.me/tags/index.html">
+           data-title="标签" data-url="http://www.cyemma.me/tags/index.html">
       </div>
     
   </div>
@@ -314,6 +321,26 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/sd63534790" target="_blank" title="github">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1911689935" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
           
         </div>
 
@@ -478,7 +505,178 @@
 
   
 
+<!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+
+<script>AV.initialize("L97401bz6Wa6WtBW9Lt6fFNW-gzGzoHsz", "9U9YWepuACHq5qc5T7FxsbAR");</script>
+<script>
+function showTime(Counter) {
+
+	var query = new AV.Query(Counter);
+
+	$(".leancloud_visitors").each(function() {
+
+		var url = $(this).attr("id").trim();
+
+		query.equalTo("url", url);
+
+		query.find({
+
+			success: function(results) {
+
+				if (results.length == 0) {
+
+					var content = $(document.getElementById(url)).text()+' 0'; 
+
+					$(document.getElementById(url)).text(content);
+
+					return;
+
+				}
+
+				for (var i = 0; i < results.length; i++) {
+
+					var object = results[i];
+
+					var content = $(document.getElementById(url)).text()+' '+object.get('time');
+
+					$(document.getElementById(url)).text(content);
+
+				}
+
+			},
+
+			error: function(object, error) {
+
+				console.log("Error: " + error.code + " " + error.message);
+
+			}
+
+		});
+
+
+
+	});
+
+}
+
+
+
+function addCount(Counter) {
+
+	var Counter = AV.Object.extend("Counter");
+
+	url = $(".leancloud_visitors").attr('id').trim();
+
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+
+	var query = new AV.Query(Counter);
+
+	query.equalTo("url", url);
+
+	query.find({
+
+		success: function(results) {
+
+			if (results.length > 0) {
+
+				var counter = results[0];
+
+				counter.fetchWhenSave(true);
+
+				counter.increment("time");
+
+				counter.save(null, {
+
+					success: function(counter) {
+
+						//var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+						var content = $(document.getElementById(url)).text()+' '+counter.get('time');
+
+						$(document.getElementById(url)).text(content);
+
+					},
+
+					error: function(counter, error) {
+
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+
+					}
+
+				});
+
+			} else {
+
+				var newcounter = new Counter();
+
+				newcounter.set("title", title);
+
+				newcounter.set("url", url);
+
+				newcounter.set("time", 1);
+
+				newcounter.save(null, {
+
+					success: function(newcounter) {
+
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+
+						//var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+
+						var content = $(document.getElementById(url)).text()+' '+newcounter.get('time');
+						
+						$(document.getElementById(url)).text(content);
+
+					},
+
+					error: function(newcounter, error) {
+
+						console.log('Failed to create');
+
+					}
+
+				});
+
+			}
+
+		},
+
+		error: function(error) {
+
+			console.log('Error:' + error.code + " " + error.message);
+
+		}
+
+	});
+
+}
+
+$(function() {
+
+	var Counter = AV.Object.extend("Counter");
+
+	if ($('.leancloud_visitors').length == 1) {
+
+		addCount(Counter);
+
+	} else if ($('.post-title-link').length > 1) {
+
+		showTime(Counter);
+
+	}
+
+}); 
+
+
+</script>
+
+
+
+
+
   
+
+
 
 </body>
 </html>

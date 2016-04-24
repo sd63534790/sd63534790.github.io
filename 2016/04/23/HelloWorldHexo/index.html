@@ -90,7 +90,7 @@
 <meta property="og:site_name" content="Cheny's Blog">
 <meta property="og:description" content="前言一个星期前,在公司无所事事,偶然的机会看到了我为什么要写博客的文章，突然心血来潮，决定尝试开始试着写写博客。
 正文有了这个念头,我试着开始寻找比较好的平台，首先想到的就是CSDN，但我觉得在CSDN上写博客用户体验的感觉太差，一堆广告不说，逼格还是太低哈，之后又看到了简书,感觉也没有吸引到我,就在前几天,看到了Hexo基于Node的框架，速度快，样式选择多，逼格高，于是利用Hexo搭建了自己的">
-<meta property="og:updated_time" content="2016-04-23T03:07:00.603Z">
+<meta property="og:updated_time" content="2016-04-24T14:44:56.847Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你好,Hexo!">
 <meta name="twitter:description" content="前言一个星期前,在公司无所事事,偶然的机会看到了我为什么要写博客的文章，突然心血来潮，决定尝试开始试着写写博客。
@@ -292,15 +292,14 @@
           
 
           
+		  
+		  
+		  &nbsp; | &nbsp;
+	      <span id="/2016/04/23/HelloWorldHexo/"class="leancloud_visitors" data-flag-title="你好,Hexo!">
+          &nbsp;阅读次数
+          </span>
+		  
 
-          
-          
-
-          
-              &nbsp; | &nbsp;
-              <span class="page-pv">本文总阅读量
-              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
-              </span>
           
         </div>
       </header>
@@ -372,11 +371,24 @@
 
     <div class="post-spread">
       
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
+        <div class="ds-share flat" data-thread-key="2016/04/23/HelloWorldHexo/"
+     data-title="你好,Hexo!"
+     data-content=""
+     data-url="http://www.cyemma.me/2016/04/23/HelloWorldHexo/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
 
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
       
     </div>
   </div>
@@ -473,6 +485,26 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/sd63534790" target="_blank" title="github">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1911689935" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
           
         </div>
 
@@ -652,7 +684,178 @@
 
   
 
+<!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+
+<script>AV.initialize("L97401bz6Wa6WtBW9Lt6fFNW-gzGzoHsz", "9U9YWepuACHq5qc5T7FxsbAR");</script>
+<script>
+function showTime(Counter) {
+
+	var query = new AV.Query(Counter);
+
+	$(".leancloud_visitors").each(function() {
+
+		var url = $(this).attr("id").trim();
+
+		query.equalTo("url", url);
+
+		query.find({
+
+			success: function(results) {
+
+				if (results.length == 0) {
+
+					var content = $(document.getElementById(url)).text()+' 0'; 
+
+					$(document.getElementById(url)).text(content);
+
+					return;
+
+				}
+
+				for (var i = 0; i < results.length; i++) {
+
+					var object = results[i];
+
+					var content = $(document.getElementById(url)).text()+' '+object.get('time');
+
+					$(document.getElementById(url)).text(content);
+
+				}
+
+			},
+
+			error: function(object, error) {
+
+				console.log("Error: " + error.code + " " + error.message);
+
+			}
+
+		});
+
+
+
+	});
+
+}
+
+
+
+function addCount(Counter) {
+
+	var Counter = AV.Object.extend("Counter");
+
+	url = $(".leancloud_visitors").attr('id').trim();
+
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+
+	var query = new AV.Query(Counter);
+
+	query.equalTo("url", url);
+
+	query.find({
+
+		success: function(results) {
+
+			if (results.length > 0) {
+
+				var counter = results[0];
+
+				counter.fetchWhenSave(true);
+
+				counter.increment("time");
+
+				counter.save(null, {
+
+					success: function(counter) {
+
+						//var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+						var content = $(document.getElementById(url)).text()+' '+counter.get('time');
+
+						$(document.getElementById(url)).text(content);
+
+					},
+
+					error: function(counter, error) {
+
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+
+					}
+
+				});
+
+			} else {
+
+				var newcounter = new Counter();
+
+				newcounter.set("title", title);
+
+				newcounter.set("url", url);
+
+				newcounter.set("time", 1);
+
+				newcounter.save(null, {
+
+					success: function(newcounter) {
+
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+
+						//var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+
+						var content = $(document.getElementById(url)).text()+' '+newcounter.get('time');
+						
+						$(document.getElementById(url)).text(content);
+
+					},
+
+					error: function(newcounter, error) {
+
+						console.log('Failed to create');
+
+					}
+
+				});
+
+			}
+
+		},
+
+		error: function(error) {
+
+			console.log('Error:' + error.code + " " + error.message);
+
+		}
+
+	});
+
+}
+
+$(function() {
+
+	var Counter = AV.Object.extend("Counter");
+
+	if ($('.leancloud_visitors').length == 1) {
+
+		addCount(Counter);
+
+	} else if ($('.post-title-link').length > 1) {
+
+		showTime(Counter);
+
+	}
+
+}); 
+
+
+</script>
+
+
+
+
+
   
+
+
 
 </body>
 </html>
