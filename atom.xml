@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cyemma.me/"/>
-  <updated>2016-04-25T02:00:35.392Z</updated>
+  <updated>2016-04-24T14:44:56.847Z</updated>
   <id>http://www.cyemma.me/</id>
   
   <author>
@@ -14,22 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://www.cyemma.me/2016/04/25/test/"/>
-    <id>http://www.cyemma.me/2016/04/25/test/</id>
-    <published>2016-04-25T02:00:35.000Z</published>
-    <updated>2016-04-25T02:00:35.392Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>你好,Hexo!</title>
