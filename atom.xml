@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cyemma.me/"/>
-  <updated>2016-04-24T14:44:56.847Z</updated>
+  <updated>2016-04-25T16:44:18.216Z</updated>
   <id>http://www.cyemma.me/</id>
   
   <author>
@@ -14,6 +14,75 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo搭建（一）</title>
+    <link href="http://www.cyemma.me/2016/04/25/Hexo-One/"/>
+    <id>http://www.cyemma.me/2016/04/25/Hexo-One/</id>
+    <published>2016-04-25T10:27:41.000Z</published>
+    <updated>2016-04-25T16:44:18.216Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;最近，自己刚刚接触Hexo，并用Hexo搭建了自己的博客，其中也上网参考了一些文章，但在搭建过程中还是遇到了一些问题。因此我觉得有必要写一些Hexo搭建的教程。主要是为了分享一下自己遇到的一些坑，也是对自己的一种积累。（其实最主要是增加下人气，热热场子哈哈~）用我的实际体验来说，你只要有点计算机基础的人，完全可以轻松使用Hexo搭建自己的博客。&lt;/p&gt;
+&lt;h1 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h1&gt;&lt;p&gt;这个教程目前只针对Window系统用户。&lt;/p&gt;
+&lt;h1 id=&quot;安装前提条件&quot;&gt;&lt;a href=&quot;#安装前提条件&quot; class=&quot;headerlink&quot; title=&quot;安装前提条件&quot;&gt;&lt;/a&gt;安装前提条件&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Node.js&lt;/a&gt;&lt;br&gt;作用：Node.js用来创建Hexo博客框架&lt;br&gt;&lt;a href=&quot;https://git-scm.com/download/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git&lt;/a&gt;&lt;br&gt;作用：主要是管理代码工具，可以同步到Github及Coding，为部署及管理代码做准备&lt;/p&gt;
+&lt;h1 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h1&gt;&lt;p&gt;安装前先介绍几个hexo常用的命令,#后面为注释。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hexo g #完整命令为hexo generate,用于生成静态文件
+hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览
+hexo d #完整命令为hexo deploy,用于将本地文件发布到github上
+hexo n #完整命令为hexo new,用于新建一篇文章
+&lt;/code&gt;&lt;/pre&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;创建一个文件夹，然后右键文件夹，如我Hexo文件夹位置为E:\hexo，选择Git Base（注只需输入$后面命令即可）&lt;br&gt;&lt;img src=&quot;/images/git.jpg&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;输入安装Hexo命令：  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ npm install hexo-cli -g      
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装完成后执行初始化&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ hexo init
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装依赖包  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;让程序在本地跑起来，在E:\hexo(你所创建的文件夹)内执行以下命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ hexo g
+$ hexo s
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后用刘浏览器访问&lt;a href=&quot;http://localhost:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000/&lt;/a&gt;，如果你可以看到一个Hexo的博客页面,表明你博客在本地的部署成功了，会不会心里有点小激动，不得不说Node.js真的强大。（网页图片为下图）&lt;br&gt;&lt;img src=&quot;/images/hexo.png&quot; alt=&quot;Alt text&quot;&gt;      &lt;/p&gt;
+&lt;h1 id=&quot;部署至Github&quot;&gt;&lt;a href=&quot;#部署至Github&quot; class=&quot;headerlink&quot; title=&quot;部署至Github&quot;&gt;&lt;/a&gt;部署至Github&lt;/h1&gt;&lt;p&gt;如果还没有Github账号，首先进入&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github&lt;/a&gt;  进行注册。&lt;/p&gt;
+&lt;h1 id=&quot;创建repository&quot;&gt;&lt;a href=&quot;#创建repository&quot; class=&quot;headerlink&quot; title=&quot;创建repository&quot;&gt;&lt;/a&gt;创建repository&lt;/h1&gt;&lt;p&gt;repository相当于一个仓库，用来放置你的代码文件。首先进入&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github&lt;/a&gt;，新创建一个repository（如下图）&lt;br&gt;&lt;img src=&quot;/images/repositories.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;创建时，只需要填写&lt;code&gt;Repository name&lt;/code&gt;即可，这个名字格式必须为&lt;code&gt;youname.github.io&lt;/code&gt;(注这个&lt;code&gt;youname&lt;/code&gt;必须为你&lt;code&gt;github&lt;/code&gt;的登录账号)，如果我的为&lt;code&gt;sd63534790.github.io&lt;/code&gt;（如下图）&lt;br&gt;&lt;img src=&quot;/images/create.png&quot; alt=&quot;Alt text&quot;&gt;  &lt;/p&gt;
+&lt;h1 id=&quot;利用Git部署文件到Github&quot;&gt;&lt;a href=&quot;#利用Git部署文件到Github&quot; class=&quot;headerlink&quot; title=&quot;利用Git部署文件到Github&quot;&gt;&lt;/a&gt;利用Git部署文件到Github&lt;/h1&gt;&lt;p&gt;编辑前面在本机创建的hexo文件夹，（例如本机&lt;code&gt;E：\hexo&lt;/code&gt;）打开文件夹下的&lt;code&gt;_config.yml&lt;/code&gt;文件，在&lt;code&gt;_config.yml&lt;/code&gt;最下方，添加如下配置，命令中type参数设置为git，repository参数设置github仓库对应的HTTPS地址或者SSH地址。（具体如下图显示）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deploy:
+type: git
+message: &amp;quot;&amp;quot;
+repo: 
+github: git@github.com:sd63534790/sd63534790.github.io.git,master
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&quot;/images/https.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;&lt;img src=&quot;/images/ssh.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;执行&lt;code&gt;HTTPS&lt;/code&gt;提交要求输入&lt;code&gt;github&lt;/code&gt;的账号和密码，执行&lt;code&gt;SSH&lt;/code&gt;提交需要输入SSH设置的密码，如果用SSH提交需要配置一下，具体方法在&lt;a href=&quot;http://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;window下配置SSH连接GitHub、GitHub配置ssh key&lt;/a&gt;。个人觉得用&lt;code&gt;SSH&lt;/code&gt;方式提交更为方便,可以不用设置账号密码。虽然配置稍微麻烦一些,长远的看这种方式还是更为方便。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ hexo g
+$ hexo d
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行HTTPS提交时，可能会要你输入用户名和密码，皆为注册Github时的数据，输入密码是不显示任何东西的，输入完毕回车即可。&lt;br&gt;如果使用过程中，遇到以下错误&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ERROR Deployer not found : github
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;则运行以下命令,或者你直接先运行这个命令更好。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ npm install hexo-deployer-git --save
+$ hexo g
+$ hexo d
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;此时，我们的博客已经搭建起来，并发布到Github上了，在浏览器访问&lt;code&gt;sd63534790.github.io&lt;/code&gt;就能看到自己的博客了。第一次访问刚地址，可能访问不了，您可以在几分钟后进行访问，一般不超过10分钟。  如果还访问不了，可能有一下几个原因：&lt;br&gt;1.github的邮箱没有进行认证,&lt;br&gt;2.确认下github仓库的Repository name是否是以github用户名+github.io命名。&lt;/p&gt;
+&lt;p&gt;#参考#&lt;br&gt;&lt;a href=&quot;http://opiece.me/2015/04/09/hexo-guide/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用Hexo搭建个人博客(基于hexo3.0)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;#总结#&lt;br&gt;由于本人刚开始写博客，肯定会有些错误，欢迎大家指正。后面的文章会继续介绍Hexo的使用，主要是主题设置、访问次数、多说评论等,如果有喜欢或者对你有帮助的朋友可以继续关注下。&lt;br&gt;本文主要介绍了搭建过程，但是如果您还是在搭建的过程中碰到了问题，欢迎您在下面留言探讨。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;最近，自己刚刚接触Hexo，并用Hexo搭建了自己的博客，其中也上网参考了一些文章，但在搭建过程中还是遇到了一些问题。因此我觉得有必要写一些Hexo搭建的教程。主要是为了分享一下自己遇到的一些坑，也是对自己的一种积累。（其实最主要是增加下人气，热热场子哈哈~）用我的实际体验来说，你只要有点计算机基础的人，完全可以轻松使用Hexo搭建自己的博客。&lt;/p&gt;
+&lt;h1 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h1&gt;&lt;p&gt;这个教程目前只针对Window系统用户。&lt;/p&gt;
+&lt;h1 id=&quot;安装前提条件&quot;&gt;&lt;a href=&quot;#安装前提条件&quot; class=&quot;headerlink&quot; title=&quot;安装前提条件&quot;&gt;&lt;/a&gt;安装前提条件&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;&lt;br&gt;作用：Node.js用来创建Hexo博客框架&lt;br&gt;&lt;a href=&quot;https://git-scm.com/download/&quot;&gt;Git&lt;/a&gt;&lt;br&gt;作用：主要是管理代码工具，可以同步到Github及Coding，为部署及管理代码做准备&lt;/p&gt;
+&lt;h1 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h1&gt;&lt;p&gt;安装前先介绍几个hexo常用的命令,#后面为注释。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hexo g #完整命令为hexo generate,用于生成静态文件
+hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览
+hexo d #完整命令为hexo deploy,用于将本地文件发布到github上
+hexo n #完整命令为hexo new,用于新建一篇文章
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://www.cyemma.me/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://www.cyemma.me/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>你好,Hexo!</title>

@@ -82,19 +82,29 @@
 
 
 
-<meta name="description" content="前言一个星期前,在公司无所事事,偶然的机会看到了我为什么要写博客的文章，突然心血来潮，决定尝试开始试着写写博客。
-正文有了这个念头,我试着开始寻找比较好的平台，首先想到的就是CSDN，但我觉得在CSDN上写博客用户体验的感觉太差，一堆广告不说，逼格还是太低哈，之后又看到了简书,感觉也没有吸引到我,就在前几天,看到了Hexo基于Node的框架，速度快，样式选择多，逼格高，于是利用Hexo搭建了自己的">
+<meta name="description" content="前言最近，自己刚刚接触Hexo，并用Hexo搭建了自己的博客，其中也上网参考了一些文章，但在搭建过程中还是遇到了一些问题。因此我觉得有必要写一些Hexo搭建的教程。主要是为了分享一下自己遇到的一些坑，也是对自己的一种积累。（其实最主要是增加下人气，热热场子哈哈~）用我的实际体验来说，你只要有点计算机基础的人，完全可以轻松使用Hexo搭建自己的博客。
+正文这个教程目前只针对Window系统用户。
+安">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你好,Hexo!">
-<meta property="og:url" content="http://www.cyemma.me/2016/04/23/HelloWorldHexo/index.html">
+<meta property="og:title" content="Hexo搭建（一）">
+<meta property="og:url" content="http://www.cyemma.me/2016/04/25/Hexo-One/index.html">
 <meta property="og:site_name" content="Cheny's Blog">
-<meta property="og:description" content="前言一个星期前,在公司无所事事,偶然的机会看到了我为什么要写博客的文章，突然心血来潮，决定尝试开始试着写写博客。
-正文有了这个念头,我试着开始寻找比较好的平台，首先想到的就是CSDN，但我觉得在CSDN上写博客用户体验的感觉太差，一堆广告不说，逼格还是太低哈，之后又看到了简书,感觉也没有吸引到我,就在前几天,看到了Hexo基于Node的框架，速度快，样式选择多，逼格高，于是利用Hexo搭建了自己的">
-<meta property="og:updated_time" content="2016-04-24T14:44:56.847Z">
+<meta property="og:description" content="前言最近，自己刚刚接触Hexo，并用Hexo搭建了自己的博客，其中也上网参考了一些文章，但在搭建过程中还是遇到了一些问题。因此我觉得有必要写一些Hexo搭建的教程。主要是为了分享一下自己遇到的一些坑，也是对自己的一种积累。（其实最主要是增加下人气，热热场子哈哈~）用我的实际体验来说，你只要有点计算机基础的人，完全可以轻松使用Hexo搭建自己的博客。
+正文这个教程目前只针对Window系统用户。
+安">
+<meta property="og:image" content="http://www.cyemma.me/images/git.jpg">
+<meta property="og:image" content="http://www.cyemma.me/images/hexo.png">
+<meta property="og:image" content="http://www.cyemma.me/images/repositories.png">
+<meta property="og:image" content="http://www.cyemma.me/images/create.png">
+<meta property="og:image" content="http://www.cyemma.me/images/https.png">
+<meta property="og:image" content="http://www.cyemma.me/images/ssh.png">
+<meta property="og:updated_time" content="2016-04-25T16:44:18.216Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你好,Hexo!">
-<meta name="twitter:description" content="前言一个星期前,在公司无所事事,偶然的机会看到了我为什么要写博客的文章，突然心血来潮，决定尝试开始试着写写博客。
-正文有了这个念头,我试着开始寻找比较好的平台，首先想到的就是CSDN，但我觉得在CSDN上写博客用户体验的感觉太差，一堆广告不说，逼格还是太低哈，之后又看到了简书,感觉也没有吸引到我,就在前几天,看到了Hexo基于Node的框架，速度快，样式选择多，逼格高，于是利用Hexo搭建了自己的">
+<meta name="twitter:title" content="Hexo搭建（一）">
+<meta name="twitter:description" content="前言最近，自己刚刚接触Hexo，并用Hexo搭建了自己的博客，其中也上网参考了一些文章，但在搭建过程中还是遇到了一些问题。因此我觉得有必要写一些Hexo搭建的教程。主要是为了分享一下自己遇到的一些坑，也是对自己的一种积累。（其实最主要是增加下人气，热热场子哈哈~）用我的实际体验来说，你只要有点计算机基础的人，完全可以轻松使用Hexo搭建自己的博客。
+正文这个教程目前只针对Window系统用户。
+安">
+<meta name="twitter:image" content="http://www.cyemma.me/images/git.jpg">
 
 
 
@@ -112,7 +122,7 @@
   };
 </script>
 
-  <title> 你好,Hexo! | Cheny's Blog </title>
+  <title> Hexo搭建（一） | Cheny's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -242,7 +252,7 @@
             
             
               
-                你好,Hexo!
+                Hexo搭建（一）
               
             
           </h1>
@@ -254,8 +264,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-23T00:43:22+08:00" content="2016-04-23">
-              2016-04-23
+            <time itemprop="dateCreated" datetime="2016-04-25T18:27:41+08:00" content="2016-04-25">
+              2016-04-25
             </time>
           </span>
 
@@ -284,8 +294,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/23/HelloWorldHexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/23/HelloWorldHexo/" itemprop="commentsCount"></span>
+                <a href="/2016/04/25/Hexo-One/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/25/Hexo-One/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -295,7 +305,7 @@
 		  
 		  
 		  &nbsp; | &nbsp;
-	      <span id="/2016/04/23/HelloWorldHexo/"class="leancloud_visitors" data-flag-title="你好,Hexo!">
+	      <span id="/2016/04/25/Hexo-One/"class="leancloud_visitors" data-flag-title="Hexo搭建（一）">
           &nbsp;阅读次数
           </span>
 		  
@@ -312,8 +322,45 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>一个星期前,在公司无所事事,偶然的机会看到了<a href="http://mp.weixin.qq.com/s?__biz=MzA4NTQwNDcyMA==&amp;mid=402564613&amp;idx=1&amp;sn=d2b7c75b11046a0dcf8df77e737d2b4c#rd" title="我为什么要写博客" target="_blank" rel="external">我为什么要写博客</a>的文章，突然心血来潮，决定尝试开始试着写写博客。</p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>有了这个念头,我试着开始寻找比较好的平台，首先想到的就是CSDN，但我觉得在CSDN上写博客用户体验的感觉太差，一堆广告不说，逼格还是太低哈，之后又看到了简书,感觉也没有吸引到我,就在前几天,看到了Hexo基于Node的框架，速度快，样式选择多，逼格高，于是利用Hexo搭建了自己的博客,如果现在你要是想搭建自己的博客，我推荐用Hexo。   </p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近，自己刚刚接触Hexo，并用Hexo搭建了自己的博客，其中也上网参考了一些文章，但在搭建过程中还是遇到了一些问题。因此我觉得有必要写一些Hexo搭建的教程。主要是为了分享一下自己遇到的一些坑，也是对自己的一种积累。（其实最主要是增加下人气，热热场子哈哈~）用我的实际体验来说，你只要有点计算机基础的人，完全可以轻松使用Hexo搭建自己的博客。</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>这个教程目前只针对Window系统用户。</p>
+<h1 id="安装前提条件"><a href="#安装前提条件" class="headerlink" title="安装前提条件"></a>安装前提条件</h1><p><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a><br>作用：Node.js用来创建Hexo博客框架<br><a href="https://git-scm.com/download/" target="_blank" rel="external">Git</a><br>作用：主要是管理代码工具，可以同步到Github及Coding，为部署及管理代码做准备</p>
+<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><p>安装前先介绍几个hexo常用的命令,#后面为注释。</p>
+<pre><code>hexo g #完整命令为hexo generate,用于生成静态文件
+hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览
+hexo d #完整命令为hexo deploy,用于将本地文件发布到github上
+hexo n #完整命令为hexo new,用于新建一篇文章
+</code></pre><a id="more"></a>
+<p>创建一个文件夹，然后右键文件夹，如我Hexo文件夹位置为E:\hexo，选择Git Base（注只需输入$后面命令即可）<br><img src="/images/git.jpg" alt="Alt text"><br>输入安装Hexo命令：  </p>
+<pre><code>$ npm install hexo-cli -g      
+</code></pre><p>安装完成后执行初始化</p>
+<pre><code>$ hexo init
+</code></pre><p>安装依赖包  </p>
+<pre><code>npm install
+</code></pre><p>让程序在本地跑起来，在E:\hexo(你所创建的文件夹)内执行以下命令</p>
+<pre><code>$ hexo g
+$ hexo s
+</code></pre><p>然后用刘浏览器访问<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>，如果你可以看到一个Hexo的博客页面,表明你博客在本地的部署成功了，会不会心里有点小激动，不得不说Node.js真的强大。（网页图片为下图）<br><img src="/images/hexo.png" alt="Alt text">      </p>
+<h1 id="部署至Github"><a href="#部署至Github" class="headerlink" title="部署至Github"></a>部署至Github</h1><p>如果还没有Github账号，首先进入<a href="https://github.com/" target="_blank" rel="external">Github</a>  进行注册。</p>
+<h1 id="创建repository"><a href="#创建repository" class="headerlink" title="创建repository"></a>创建repository</h1><p>repository相当于一个仓库，用来放置你的代码文件。首先进入<a href="https://github.com/" target="_blank" rel="external">Github</a>，新创建一个repository（如下图）<br><img src="/images/repositories.png" alt="Alt text"><br>创建时，只需要填写<code>Repository name</code>即可，这个名字格式必须为<code>youname.github.io</code>(注这个<code>youname</code>必须为你<code>github</code>的登录账号)，如果我的为<code>sd63534790.github.io</code>（如下图）<br><img src="/images/create.png" alt="Alt text">  </p>
+<h1 id="利用Git部署文件到Github"><a href="#利用Git部署文件到Github" class="headerlink" title="利用Git部署文件到Github"></a>利用Git部署文件到Github</h1><p>编辑前面在本机创建的hexo文件夹，（例如本机<code>E：\hexo</code>）打开文件夹下的<code>_config.yml</code>文件，在<code>_config.yml</code>最下方，添加如下配置，命令中type参数设置为git，repository参数设置github仓库对应的HTTPS地址或者SSH地址。（具体如下图显示）</p>
+<pre><code>deploy:
+type: git
+message: &quot;&quot;
+repo: 
+github: git@github.com:sd63534790/sd63534790.github.io.git,master
+</code></pre><p><img src="/images/https.png" alt="Alt text"><br><img src="/images/ssh.png" alt="Alt text"><br>执行<code>HTTPS</code>提交要求输入<code>github</code>的账号和密码，执行<code>SSH</code>提交需要输入SSH设置的密码，如果用SSH提交需要配置一下，具体方法在<a href="http://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html" target="_blank" rel="external">window下配置SSH连接GitHub、GitHub配置ssh key</a>。个人觉得用<code>SSH</code>方式提交更为方便,可以不用设置账号密码。虽然配置稍微麻烦一些,长远的看这种方式还是更为方便。</p>
+<pre><code>$ hexo g
+$ hexo d
+</code></pre><p>执行HTTPS提交时，可能会要你输入用户名和密码，皆为注册Github时的数据，输入密码是不显示任何东西的，输入完毕回车即可。<br>如果使用过程中，遇到以下错误</p>
+<pre><code>ERROR Deployer not found : github
+</code></pre><p>则运行以下命令,或者你直接先运行这个命令更好。</p>
+<pre><code>$ npm install hexo-deployer-git --save
+$ hexo g
+$ hexo d
+</code></pre><p>此时，我们的博客已经搭建起来，并发布到Github上了，在浏览器访问<code>sd63534790.github.io</code>就能看到自己的博客了。第一次访问刚地址，可能访问不了，您可以在几分钟后进行访问，一般不超过10分钟。  如果还访问不了，可能有一下几个原因：<br>1.github的邮箱没有进行认证,<br>2.确认下github仓库的Repository name是否是以github用户名+github.io命名。</p>
+<p>#参考#<br><a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">使用Hexo搭建个人博客(基于hexo3.0)</a></p>
+<p>#总结#<br>由于本人刚开始写博客，肯定会有些错误，欢迎大家指正。后面的文章会继续介绍Hexo的使用，主要是主题设置、访问次数、多说评论等,如果有喜欢或者对你有帮助的朋友可以继续关注下。<br>本文主要介绍了搭建过程，但是如果您还是在搭建的过程中碰到了问题，欢迎您在下面留言探讨。</p>
 
       
     </div>
@@ -364,13 +411,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/04/23/HelloWorldHexo/" rel="next" title="你好,Hexo!">
+                <i class="fa fa-chevron-left"></i> 你好,Hexo!
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/25/Hexo-One/" rel="prev" title="Hexo搭建（一）">
-                Hexo搭建（一） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -385,10 +432,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/04/23/HelloWorldHexo/"
-     data-title="你好,Hexo!"
+        <div class="ds-share flat" data-thread-key="2016/04/25/Hexo-One/"
+     data-title="Hexo搭建（一）"
      data-content=""
-     data-url="http://www.cyemma.me/2016/04/23/HelloWorldHexo/">
+     data-url="http://www.cyemma.me/2016/04/25/Hexo-One/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -418,8 +465,8 @@
 
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/23/HelloWorldHexo/"
-           data-title="你好,Hexo!" data-url="http://www.cyemma.me/2016/04/23/HelloWorldHexo/">
+      <div class="ds-thread" data-thread-key="2016/04/25/Hexo-One/"
+           data-title="Hexo搭建（一）" data-url="http://www.cyemma.me/2016/04/25/Hexo-One/">
       </div>
     
   </div>
@@ -537,7 +584,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装前提条件"><span class="nav-number">3.</span> <span class="nav-text">安装前提条件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Hexo"><span class="nav-number">4.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署至Github"><span class="nav-number">5.</span> <span class="nav-text">部署至Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建repository"><span class="nav-number">6.</span> <span class="nav-text">创建repository</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用Git部署文件到Github"><span class="nav-number">7.</span> <span class="nav-text">利用Git部署文件到Github</span></a></li></ol></div>
             
           </div>
         </section>
