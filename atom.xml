@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cyemma.me/"/>
-  <updated>2016-04-28T06:30:54.007Z</updated>
+  <updated>2016-04-28T14:50:34.015Z</updated>
   <id>http://www.cyemma.me/</id>
   
   <author>
@@ -20,261 +20,25 @@
     <link href="http://www.cyemma.me/2016/04/27/Hexo-Two/"/>
     <id>http://www.cyemma.me/2016/04/27/Hexo-Two/</id>
     <published>2016-04-27T10:47:30.000Z</published>
-    <updated>2016-04-28T06:30:54.007Z</updated>
+    <updated>2016-04-28T14:50:34.015Z</updated>
     
     <content type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;Hexo支持很多扩展的主题，同时Github上面有大量的&lt;a href=&quot;https://github.com/hexojs/hexo/wiki/Themes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;主题列表&lt;/a&gt;,有兴趣的朋友可以去了解下,我个人比较喜欢的是&lt;a href=&quot;https://github.com/hexojs/hexo/wiki/Themes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NexT&lt;/a&gt;主题,该主题的风格比较简单、大方。也是你们现在看到的主题风格。所以今天主要说一下关于该主题的配置及一些第三方插件的使用，或者你也可以直接查看&lt;a href=&quot;https://github.com/hexojs/hexo/wiki/Themes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NexT&lt;/a&gt;帮助文档，进行了解，文档写的算是比较详细的。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h1&gt;&lt;h2 id=&quot;利用git将NexT主题下载到本地&quot;&gt;&lt;a href=&quot;#利用git将NexT主题下载到本地&quot; class=&quot;headerlink&quot; title=&quot;利用git将NexT主题下载到本地&quot;&gt;&lt;/a&gt;利用git将NexT主题下载到本地&lt;/h2&gt;&lt;p&gt;进入自己博客存放主题目录（例如&lt;code&gt;E:\myblog\themes\&lt;/code&gt;）,右键选择git bash，执行以下命令&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/iissnan/hexo-theme-next.git
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;修改主站点的配置文件&quot;&gt;&lt;a href=&quot;#修改主站点的配置文件&quot; class=&quot;headerlink&quot; title=&quot;修改主站点的配置文件&quot;&gt;&lt;/a&gt;修改主站点的配置文件&lt;/h2&gt;&lt;p&gt;这里说的主站点配置文件是指博客的&lt;code&gt;_config.yml&lt;/code&gt;文件，例如（&lt;code&gt;E:\myblog\_config.yml&lt;/code&gt;）,讲&lt;code&gt;theme&lt;/code&gt;的值修改为刚才下载的主题文件名&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;heme: hexo-theme-next
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;修改next主题的配置文件&quot;&gt;&lt;a href=&quot;#修改next主题的配置文件&quot; class=&quot;headerlink&quot; title=&quot;修改next主题的配置文件&quot;&gt;&lt;/a&gt;修改next主题的配置文件&lt;/h2&gt;&lt;p&gt;打开&lt;code&gt;E:\myblog\themes\next\_config.yml&lt;/code&gt;，修改部分内容，此处分两部分&lt;/p&gt;
-&lt;h2 id=&quot;第一部分：需要修改&quot;&gt;&lt;a href=&quot;#第一部分：需要修改&quot; class=&quot;headerlink&quot; title=&quot;第一部分：需要修改&quot;&gt;&lt;/a&gt;第一部分：需要修改&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;favicon: /favicon.ico    #网站图标(收藏夹图标)，放在主题的source/文件夹下
-
-since: 2015#填写自己建博客的年份
-
-avatar: /images/avatar.jpg #侧边栏的头像，放在主题的/source/images/文件夹下
-
-swiftype_key: #填写swiftype代码中版本号前面的一串字符，如下图
-
-baidu_analytics: #百度统计id，即concise主题配置文件中的baidu_sid字段
-
-tencent_analytics: #腾讯统计id，即concise主题配置文件中的tencent_sid字段
-
-duoshuo_shortname: #多说评论标识  
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;tencent-sid和baidu-sid的值怎么获取？&quot;&gt;&lt;a href=&quot;#tencent-sid和baidu-sid的值怎么获取？&quot; class=&quot;headerlink&quot; title=&quot;tencent_sid和baidu_sid的值怎么获取？&quot;&gt;&lt;/a&gt;tencent_sid和baidu_sid的值怎么获取？&lt;/h2&gt;&lt;p&gt;在百度统计和腾讯分析注册帐号，新建站点后获取代码即可看到如下图的代码，红色部分即为tencent_sid和baidu_sid。&lt;br&gt;&lt;img src=&quot;/images/hexo_two/baidu.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;&lt;img src=&quot;/images/hexo_two/tecent.png&quot; alt=&quot;Alt text&quot;&gt;GitHub&lt;/p&gt;
-&lt;h2 id=&quot;第二部分：选择修改&quot;&gt;&lt;a href=&quot;#第二部分：选择修改&quot; class=&quot;headerlink&quot; title=&quot;第二部分：选择修改&quot;&gt;&lt;/a&gt;第二部分：选择修改&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;menu:    #菜单栏，根据自己需要选择
-  home: /
-  #categories: /categories
-  #about: /about
-  archives: /archives
-  tags: /tags
-  #commonweal: /404.html
-menu_icons:
-  enable: true    #是否开启菜单栏图标，对面上面的菜单栏
-
-scheme: Muse    #提供了3种选择，是3种不同的样式，本人使用的是Mist
-
-#social:    #在右侧边栏中显示自己的社交超链接(github,facebook等)
-  #GitHub: sd63534790    #填写github的名字部分即可
-  #Others:
-social_icons:    #社交超链的小图标，对应上面的超链接
-  enable: true
-
-links_title: Links    #超链接的标题
-# links
-links:    
-  Cheny: http://cheny.csdn.net/v123411739    #超链接，Cheny为显示的名字
-
-leancloud_visitors:    #通过leancloud显示文章阅读次数，下文介绍怎么使用
-  enable: true    #是否开启
-  app_id: #应用id
-  app_key: #应用key
-&lt;/code&gt;&lt;/pre&gt;  
-
-
-
+&lt;h1 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h1&gt;&lt;h2 id=&quot;利用git将NexT主题下载到本地&quot;&gt;&lt;a href=&quot;#利用git将NexT主题下载到本地&quot; class=&quot;headerlink&quot; title=&quot;利用git将NexT主题下载到本地&quot;&gt;&lt;/a&gt;利用git将NexT主题下载到本地&lt;/h2&gt;&lt;p&gt;进入自己博客存放主题目录（例如&lt;code&gt;E:\myblog\themes\&lt;/code&gt;）,右键选择git bash，执行以下命令&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git clone https://github.com/iissnan/hexo-theme-next.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;修改主站点的配置文件&quot;&gt;&lt;a href=&quot;#修改主站点的配置文件&quot; class=&quot;headerlink&quot; title=&quot;修改主站点的配置文件&quot;&gt;&lt;/a&gt;修改主站点的配置文件&lt;/h2&gt;&lt;p&gt;这里说的主站点配置文件是指博客的&lt;code&gt;_config.yml&lt;/code&gt;文件，例如（&lt;code&gt;E:\myblog\_config.yml&lt;/code&gt;）,讲&lt;code&gt;theme&lt;/code&gt;的值修改为刚才下载的主题文件名&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;heme: hexo-theme-next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;修改next主题的配置文件&quot;&gt;&lt;a href=&quot;#修改next主题的配置文件&quot; class=&quot;headerlink&quot; title=&quot;修改next主题的配置文件&quot;&gt;&lt;/a&gt;修改next主题的配置文件&lt;/h2&gt;&lt;p&gt;打开&lt;code&gt;E:\myblog\themes\next\_config.yml&lt;/code&gt;，修改部分内容，此处分两部分&lt;/p&gt;
+&lt;h2 id=&quot;第一部分：需要修改&quot;&gt;&lt;a href=&quot;#第一部分：需要修改&quot; class=&quot;headerlink&quot; title=&quot;第一部分：需要修改&quot;&gt;&lt;/a&gt;第一部分：需要修改&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;favicon: /favicon.ico	#网站图标(收藏夹图标)，放在主题的source/文件夹下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;since: 2015#填写自己建博客的年份&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;avatar: /images/avatar.jpg #侧边栏的头像，放在主题的/source/images/文件夹下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;swiftype_key: #填写swiftype代码中版本号前面的一串字符，如下图&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;baidu_analytics: #百度统计id，即concise主题配置文件中的baidu_sid字段&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tencent_analytics: #腾讯统计id，即concise主题配置文件中的tencent_sid字段&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;duoshuo_shortname: #多说评论标识&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;tencent-sid和baidu-sid的值怎么获取？&quot;&gt;&lt;a href=&quot;#tencent-sid和baidu-sid的值怎么获取？&quot; class=&quot;headerlink&quot; title=&quot;tencent_sid和baidu_sid的值怎么获取？&quot;&gt;&lt;/a&gt;tencent_sid和baidu_sid的值怎么获取？&lt;/h2&gt;&lt;p&gt;在百度统计和腾讯分析注册帐号，新建站点后获取代码即可看到如下图的代码，红色部分即为tencent_sid和baidu_sid。&lt;br&gt;&lt;img src=&quot;/images/hexo_two/baidu.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;&lt;img src=&quot;/images/hexo_two/tecent.png&quot; alt=&quot;Alt text&quot;&gt;GitHub&lt;/p&gt;
+&lt;h2 id=&quot;第二部分：选择修改&quot;&gt;&lt;a href=&quot;#第二部分：选择修改&quot; class=&quot;headerlink&quot; title=&quot;第二部分：选择修改&quot;&gt;&lt;/a&gt;第二部分：选择修改&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;menu:	#菜单栏，根据自己需要选择&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  home: /&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #categories: /categories&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #about: /about&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  archives: /archives&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  tags: /tags&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #commonweal: /404.html&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;menu_icons:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  enable: true	#是否开启菜单栏图标，对面上面的菜单栏&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;scheme: Muse	#提供了3种选择，是3种不同的样式，本人使用的是Mist&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#social:	#在右侧边栏中显示自己的社交超链接(github,facebook等)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #GitHub: sd63534790	#填写github的名字部分即可&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  #Others:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;social_icons:	#社交超链的小图标，对应上面的超链接&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  enable: true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;links_title: Links	#超链接的标题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# links&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;links:	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Cheny: http://cheny.csdn.net/v123411739	#超链接，Cheny为显示的名字&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;leancloud_visitors:	#通过leancloud显示文章阅读次数，下文介绍怎么使用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  enable: true	#是否开启&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  app_id: #应用id&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  app_key: #应用key&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;其他第三方插件&quot;&gt;&lt;a href=&quot;#其他第三方插件&quot; class=&quot;headerlink&quot; title=&quot;其他第三方插件&quot;&gt;&lt;/a&gt;其他第三方插件&lt;/h2&gt;&lt;p&gt;其他第三插件设置请看&lt;a href=&quot;https://github.com/hexojs/hexo/wiki/Themes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档说明&lt;/a&gt;,个人觉得还是很详细的。有点需要注意，主题配置文件中，baidushare（百度分享）设置为true时无效，有知道的朋友可以帮忙讲解一下,所以我设置了duoshuo_share（多说分享）设置为true。  &lt;/p&gt;
 &lt;h2 id=&quot;通过leancloud显示文章阅读次数&quot;&gt;&lt;a href=&quot;#通过leancloud显示文章阅读次数&quot; class=&quot;headerlink&quot; title=&quot;通过leancloud显示文章阅读次数&quot;&gt;&lt;/a&gt;通过leancloud显示文章阅读次数&lt;/h2&gt;&lt;p&gt;1)进入leancloud官网注册一个用户&lt;br&gt;2)创建一个应用，名字随意&lt;br&gt;3)进入应用，选择存储一栏，点击数据旁边的小齿轮，选择创建Class&lt;br&gt;&lt;img src=&quot;/images/hexo_two/count.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;4)在Class name一栏输入Counter后创建&lt;br&gt;&lt;img src=&quot;/images/hexo_two/count_two.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;5）点击菜单栏中的设置，将应用URL填入自己的博客地址后保存，点击左侧应用Key一栏&lt;br&gt;&lt;img src=&quot;/images/hexo_two/count3.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;6)将APP Id和APP Key复制，填入上文中主题配置文件中的的&lt;code&gt;app_id&lt;/code&gt;和&lt;code&gt;app_key&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;/images/hexo_two/count4.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;7)重新部署发布博客，记录文章访问量的唯一标识符是文章的&lt;code&gt;发布日期&lt;/code&gt;以及&lt;code&gt;文章的标题&lt;/code&gt;，因此请确保这两个数值组合的唯一性，如果你更改了这两个数值，会造成文章阅读数值的清零重计&lt;br&gt;8)查看Counter，如果刚创建内容可能为空，去博客点一点文章这边就有内容了，&lt;code&gt;url&lt;/code&gt;是唯一标识，不要乱改，如果想改请先查看官方文档，&lt;code&gt;time&lt;/code&gt;是阅读次数，可以修改&lt;br&gt;&lt;img src=&quot;/images/hexo_two/count5.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;9)为了确保该应用只在自己的博客上使用，添加web安全域名，填入自己博客域名，这样就只有自己的博客可以访问后台数据了&lt;br&gt;&lt;img src=&quot;/images/hexo_two/count6.png&quot; alt=&quot;Alt text&quot;&gt;  &lt;/p&gt;
 &lt;h2 id=&quot;首页文章阅读次数的显示&quot;&gt;&lt;a href=&quot;#首页文章阅读次数的显示&quot; class=&quot;headerlink&quot; title=&quot;首页文章阅读次数的显示&quot;&gt;&lt;/a&gt;首页文章阅读次数的显示&lt;/h2&gt;&lt;p&gt;目前NexT页面的统计技术由第三方不蒜子提供，但是不蒜子不能够在主页展示文章阅读量啊，对于我这种有点强迫的人实在有点忍不掉,又看到别的博主有实现这个功能，更不能忍了，参考网上资料，下面讲解下该功能如何实现。&lt;/p&gt;
 &lt;h3 id=&quot;配置leanCloud&quot;&gt;&lt;a href=&quot;#配置leanCloud&quot; class=&quot;headerlink&quot; title=&quot;配置leanCloud&quot;&gt;&lt;/a&gt;配置leanCloud&lt;/h3&gt;&lt;p&gt;首先需要完成leanCloud的设置，主要文章技术统计是根据leanCloud计算统计的，如果没有设置可以查看上文中leanCloud的设置。&lt;/p&gt;
-&lt;h3 id=&quot;lean-analytics-swig文件&quot;&gt;&lt;a href=&quot;#lean-analytics-swig文件&quot; class=&quot;headerlink&quot; title=&quot;lean-analytics.swig文件&quot;&gt;&lt;/a&gt;lean-analytics.swig文件&lt;/h3&gt;&lt;p&gt;在主题的 layout_scripts 路径下，新建一个 lean-analytics.swig 文件，并向里面添加以下内容：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- custom analytics part create by xiamo --&amp;gt;
-&amp;lt;script src=&amp;quot;https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;script&amp;gt;AV.initialize(&amp;quot;{{theme.leancloud_visitors.app_id}}&amp;quot;, &amp;quot;{{theme.leancloud_visitors.app_key}}&amp;quot;);&amp;lt;/script&amp;gt;
-&amp;lt;script&amp;gt;
-function showTime(Counter) {
-
-var query = new AV.Query(Counter);
-
-$(&amp;quot;.leancloud_visitors&amp;quot;).each(function() {
-
-    var url = $(this).attr(&amp;quot;id&amp;quot;).trim();
-
-    query.equalTo(&amp;quot;url&amp;quot;, url);
-
-    query.find({
-
-        success: function(results) {
-
-            if (results.length == 0) {
-
-                var content = $(document.getElementById(url)).text()+&amp;apos; 0&amp;apos;; 
-
-                $(document.getElementById(url)).text(content);
-
-                return;
-
-            }
-
-            for (var i = 0; i &amp;lt; results.length; i++) {
-
-                var object = results[i];
-
-                var content = $(document.getElementById(url)).text()+&amp;apos; &amp;apos;+object.get(&amp;apos;time&amp;apos;);
-
-                $(document.getElementById(url)).text(content);
-
-            }
-
-        },
-
-        error: function(object, error) {
-
-            console.log(&amp;quot;Error: &amp;quot; + error.code + &amp;quot; &amp;quot; + error.message);
-
-        }
-
-    });
-
-
-
-});
-
-}
-
-
-
-function addCount(Counter) {
-
-var Counter = AV.Object.extend(&amp;quot;Counter&amp;quot;);
-
-url = $(&amp;quot;.leancloud_visitors&amp;quot;).attr(&amp;apos;id&amp;apos;).trim();
-
-title = $(&amp;quot;.leancloud_visitors&amp;quot;).attr(&amp;apos;data-flag-title&amp;apos;).trim();
-
-var query = new AV.Query(Counter);
-
-query.equalTo(&amp;quot;url&amp;quot;, url);
-
-query.find({
-
-    success: function(results) {
-
-        if (results.length &amp;gt; 0) {
-
-            var counter = results[0];
-
-            counter.fetchWhenSave(true);
-
-            counter.increment(&amp;quot;time&amp;quot;);
-
-            counter.save(null, {
-
-                success: function(counter) {
-
-                    //var content =  counter.get(&amp;apos;time&amp;apos;) + &amp;apos; &amp;apos; + $(document.getElementById(url)).text();
-                    var content = $(document.getElementById(url)).text()+&amp;apos; &amp;apos;+counter.get(&amp;apos;time&amp;apos;);
-
-                    $(document.getElementById(url)).text(content);
-
-                },
-
-                error: function(counter, error) {
-
-                    console.log(&amp;apos;Failed to save Visitor num, with error message: &amp;apos; + error.message);
-
-                }
-
-            });
-
-        } else {
-
-            var newcounter = new Counter();
-
-            newcounter.set(&amp;quot;title&amp;quot;, title);
-
-            newcounter.set(&amp;quot;url&amp;quot;, url);
-
-            newcounter.set(&amp;quot;time&amp;quot;, 1);
-
-            newcounter.save(null, {
-
-                success: function(newcounter) {
-
-                    console.log(&amp;quot;newcounter.get(&amp;apos;time&amp;apos;)=&amp;quot;+newcounter.get(&amp;apos;time&amp;apos;));
-
-                    //var content = newcounter.get(&amp;apos;time&amp;apos;) + &amp;apos; &amp;apos; + $(document.getElementById(url)).text();
-
-                    var content = $(document.getElementById(url)).text()+&amp;apos; &amp;apos;+newcounter.get(&amp;apos;time&amp;apos;);
-
-                    $(document.getElementById(url)).text(content);
-
-                },
-
-                error: function(newcounter, error) {
-
-                    console.log(&amp;apos;Failed to create&amp;apos;);
-
-                }
-
-            });
-
-        }
-
-    },
-
-    error: function(error) {
-
-        console.log(&amp;apos;Error:&amp;apos; + error.code + &amp;quot; &amp;quot; + error.message);
-
-    }
-
-});
-
-}
-
-$(function() {
-
-var Counter = AV.Object.extend(&amp;quot;Counter&amp;quot;);
-
-if ($(&amp;apos;.leancloud_visitors&amp;apos;).length == 1) {
-
-    addCount(Counter);
-
-} else if ($(&amp;apos;.post-title-link&amp;apos;).length &amp;gt; 1) {
-
-    showTime(Counter);
-
-}
-
-}); 
-
-
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;修改-post-swig-文件&quot;&gt;&lt;a href=&quot;#修改-post-swig-文件&quot; class=&quot;headerlink&quot; title=&quot;修改 post.swig 文件&quot;&gt;&lt;/a&gt;修改 post.swig 文件&lt;/h3&gt;&lt;p&gt;在主题的 layout_macro 路径下，打开 post.swig 文件，找到以下内容（大概88行）：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %}
-    | &lt;div class=&quot;fb-like&quot; data-layout=&quot;button_count&quot; data-share=&quot;true&quot;&gt;&lt;/div&gt;
-	{% endif %}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在其后面添加如下内容（如果有存在类似的代码就不需要添加）：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{% if theme.leancloud_visitors.enable %}
-      	 &lt;span id=&quot;{{ url_for(post.path) }}&quot; class=&quot;leancloud_visitors&quot; data-flag-title=&quot;{{ post.title }}&quot;&gt;
-              |   {{__(&#39;post.visitors&#39;)}}
-            &lt;/span&gt;
-      {% endif %}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;添加完毕之后，文件内容像这个样子：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  {% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %}
-          |  
-        &lt;div class=&quot;fb-like&quot; data-layout=&quot;button_count&quot; data-share=&quot;true&quot;&gt;&lt;/div&gt;
-      {% endif %}
-{% if theme.leancloud_visitors.enable %}  
-	&lt;span id=&quot;{{ url_for(post.path) }}&quot; class=&quot;leancloud_visitors&quot; data-flag-title=&quot;{{ post.title }}&quot;&gt;
-          |   {{__(&#39;post.visitors&#39;)}}
-        &lt;/span&gt;
-	{% endif %}
-&amp;lt;/div&amp;gt;
-&amp;lt;/header&amp;gt;
-{% endif %}
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;修改-zh-Hans-yml-文件&quot;&gt;&lt;a href=&quot;#修改-zh-Hans-yml-文件&quot; class=&quot;headerlink&quot; title=&quot;修改 zh-Hans.yml 文件&quot;&gt;&lt;/a&gt;修改 zh-Hans.yml 文件&lt;/h3&gt;&lt;p&gt;在NexT目录的 languages 路径下的 zh-Hans.yml 文件，在 post: 结点下添加 visitors: 阅读次数 ，像这个样子：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;post:
-    posted: 发表于
-    visitors: 阅读次数
-    updated: 更新于
-    in: 分类于
-    read_more: 阅读全文
-    untitled: 未命名
-    toc_empty: 此文章未包含目录
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;#参考#&lt;br&gt;&lt;a href=&quot;http://opiece.me/2016/03/12/concise-to-next/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用Hexo搭建个人博客(基于hexo3.0)&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.tuicool.com/articles/YB3EJnz/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;为NexT主题添加文章阅读量统计功能&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;lean-analytics-swig文件&quot;&gt;&lt;a href=&quot;#lean-analytics-swig文件&quot; class=&quot;headerlink&quot; title=&quot;lean-analytics.swig文件&quot;&gt;&lt;/a&gt;lean-analytics.swig文件&lt;/h3&gt;&lt;p&gt;在主题的 layout_scripts 路径下，新建一个 lean-analytics.swig 文件，并向里面添加以下内容：&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;83&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!-- custom analytics part create by xiamo --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;script src=&amp;quot;https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;script&amp;gt;AV.initialize(&amp;quot;&amp;#123;&amp;#123;theme.leancloud_visitors.app_id&amp;#125;&amp;#125;&amp;quot;, &amp;quot;&amp;#123;&amp;#123;theme.leancloud_visitors.app_key&amp;#125;&amp;#125;&amp;quot;);&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;function showTime(Counter) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var query = new AV.Query(Counter);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$(&amp;quot;.leancloud_visitors&amp;quot;).each(function() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	var url = $(this).attr(&amp;quot;id&amp;quot;).trim();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	query.equalTo(&amp;quot;url&amp;quot;, url);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	query.find(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		success: function(results) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			if (results.length == 0) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				var content = $(document.getElementById(url)).text()+&amp;apos; 0&amp;apos;; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				$(document.getElementById(url)).text(content);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				return;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			for (var i = 0; i &amp;lt; results.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				var object = results[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				var content = $(document.getElementById(url)).text()+&amp;apos; &amp;apos;+object.get(&amp;apos;time&amp;apos;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				$(document.getElementById(url)).text(content);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		error: function(object, error) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			console.log(&amp;quot;Error: &amp;quot; + error.code + &amp;quot; &amp;quot; + error.message);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;function addCount(Counter) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var Counter = AV.Object.extend(&amp;quot;Counter&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;url = $(&amp;quot;.leancloud_visitors&amp;quot;).attr(&amp;apos;id&amp;apos;).trim();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;title = $(&amp;quot;.leancloud_visitors&amp;quot;).attr(&amp;apos;data-flag-title&amp;apos;).trim();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var query = new AV.Query(Counter);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;query.equalTo(&amp;quot;url&amp;quot;, url);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;query.find(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	success: function(results) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		if (results.length &amp;gt; 0) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			var counter = results[0];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			counter.fetchWhenSave(true);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			counter.increment(&amp;quot;time&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			counter.save(null, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				success: function(counter) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					//var content =  counter.get(&amp;apos;time&amp;apos;) + &amp;apos; &amp;apos; + $(document.getElementById(url)).text();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					var content = $(document.getElementById(url)).text()+&amp;apos; &amp;apos;+counter.get(&amp;apos;time&amp;apos;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					$(document.getElementById(url)).text(content);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				error: function(counter, error) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					console.log(&amp;apos;Failed to save Visitor num, with error message: &amp;apos; + error.message);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; else &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			var newcounter = new Counter();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			newcounter.set(&amp;quot;title&amp;quot;, title);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			newcounter.set(&amp;quot;url&amp;quot;, url);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			newcounter.set(&amp;quot;time&amp;quot;, 1);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			newcounter.save(null, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				success: function(newcounter) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				    console.log(&amp;quot;newcounter.get(&amp;apos;time&amp;apos;)=&amp;quot;+newcounter.get(&amp;apos;time&amp;apos;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					//var content = newcounter.get(&amp;apos;time&amp;apos;) + &amp;apos; &amp;apos; + $(document.getElementById(url)).text();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					var content = $(document.getElementById(url)).text()+&amp;apos; &amp;apos;+newcounter.get(&amp;apos;time&amp;apos;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					$(document.getElementById(url)).text(content);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				error: function(newcounter, error) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					console.log(&amp;apos;Failed to create&amp;apos;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	error: function(error) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		console.log(&amp;apos;Error:&amp;apos; + error.code + &amp;quot; &amp;quot; + error.message);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$(function() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var Counter = AV.Object.extend(&amp;quot;Counter&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if ($(&amp;apos;.leancloud_visitors&amp;apos;).length == 1) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	addCount(Counter);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; else if ($(&amp;apos;.post-title-link&amp;apos;).length &amp;gt; 1) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	showTime(Counter);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;); &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;修改-post-swig-文件&quot;&gt;&lt;a href=&quot;#修改-post-swig-文件&quot; class=&quot;headerlink&quot; title=&quot;修改 post.swig 文件&quot;&gt;&lt;/a&gt;修改 post.swig 文件&lt;/h3&gt;&lt;p&gt;在主题的 layout_macro 路径下，打开 post.swig 文件，找到以下内容（大概88行）：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| &amp;lt;div class=&amp;quot;fb-like&amp;quot; data-layout=&amp;quot;button_count&amp;quot; data-share=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在其后面添加如下内容（如果有存在类似的代码就不需要添加）：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% if theme.leancloud_visitors.enable %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  	 &amp;lt;span id=&amp;quot;&amp;#123;&amp;#123; url_for(post.path) &amp;#125;&amp;#125;&amp;quot;class=&amp;quot;leancloud_visitors&amp;quot;  data-flag-title=&amp;quot;&amp;#123;&amp;#123; post.title &amp;#125;&amp;#125;&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          |   &amp;#123;&amp;#123;__(&amp;apos;post.visitors&amp;apos;)&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;添加完毕之后，文件内容像这个样子：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  |  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;fb-like&amp;quot; data-layout=&amp;quot;button_count&amp;quot; data-share=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% if theme.leancloud_visitors.enable %&amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;span id=&amp;quot;&amp;#123;&amp;#123; url_for(post.path) &amp;#125;&amp;#125;&amp;quot;class=&amp;quot;leancloud_visitors&amp;quot;  data-flag-title=&amp;quot;&amp;#123;&amp;#123; post.title &amp;#125;&amp;#125;&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  |   &amp;#123;&amp;#123;__(&amp;apos;post.visitors&amp;apos;)&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/header&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endif %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;修改-zh-Hans-yml-文件&quot;&gt;&lt;a href=&quot;#修改-zh-Hans-yml-文件&quot; class=&quot;headerlink&quot; title=&quot;修改 zh-Hans.yml 文件&quot;&gt;&lt;/a&gt;修改 zh-Hans.yml 文件&lt;/h3&gt;&lt;p&gt;在NexT目录的 languages 路径下的 zh-Hans.yml 文件，在 post: 结点下添加 visitors: 阅读次数 ，像这个样子：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;post:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    posted: 发表于&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	visitors: 阅读次数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	updated: 更新于&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	in: 分类于&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	read_more: 阅读全文&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	untitled: 未命名&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	toc_empty: 此文章未包含目录&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;#参考#&lt;br&gt;&lt;a href=&quot;http://opiece.me/2016/03/12/concise-to-next/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用Hexo搭建个人博客(基于hexo3.0)&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.tuicool.com/articles/YB3EJnz/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;为NexT主题添加文章阅读量统计功能&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h1&gt;&lt;p&gt;其实Hexo主题搭建还是挺简单的,搭好自己的主题，大家就是开始写文章了，下一节主要讲一下同步到github和coding及绑定域名的方法，喜欢的朋友可以持续关注。&lt;br&gt;最后，如果你有什么问题或者想法可以在下方留言，我将尽力帮你解决。&lt;/p&gt;
 </content>
     
@@ -300,46 +64,26 @@ if ($(&amp;apos;.leancloud_visitors&amp;apos;).length == 1) {
     <link href="http://www.cyemma.me/2016/04/25/Hexo-One/"/>
     <id>http://www.cyemma.me/2016/04/25/Hexo-One/</id>
     <published>2016-04-25T10:27:41.000Z</published>
-    <updated>2016-04-27T12:09:00.229Z</updated>
+    <updated>2016-04-28T14:36:07.895Z</updated>
     
     <content type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;最近，自己刚刚接触Hexo，并用Hexo搭建了自己的博客，其中也上网参考了一些文章，但在搭建过程中还是遇到了一些问题。因此我觉得有必要写一些Hexo搭建的教程。主要是为了分享一下自己遇到的一些坑，也是对自己的一种积累。（其实最主要是增加下人气，热热场子哈哈~）用我的实际体验来说，你只要有点计算机基础的人，完全可以轻松使用Hexo搭建自己的博客。&lt;/p&gt;
 &lt;h1 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h1&gt;&lt;p&gt;这个教程目前只针对Window系统用户。&lt;/p&gt;
 &lt;h1 id=&quot;安装前提条件&quot;&gt;&lt;a href=&quot;#安装前提条件&quot; class=&quot;headerlink&quot; title=&quot;安装前提条件&quot;&gt;&lt;/a&gt;安装前提条件&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Node.js&lt;/a&gt;&lt;br&gt;作用：Node.js用来创建Hexo博客框架&lt;br&gt;&lt;a href=&quot;https://git-scm.com/download/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git&lt;/a&gt;&lt;br&gt;作用：主要是管理代码工具，可以同步到Github及Coding，为部署及管理代码做准备&lt;/p&gt;
-&lt;h1 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h1&gt;&lt;p&gt;安装前先介绍几个hexo常用的命令,#后面为注释。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;hexo g #完整命令为hexo generate,用于生成静态文件
-hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览
-hexo d #完整命令为hexo deploy,用于将本地文件发布到github上
-hexo n #完整命令为hexo new,用于新建一篇文章
-&lt;/code&gt;&lt;/pre&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;创建一个文件夹，然后右键文件夹，如我Hexo文件夹位置为E:\hexo，选择Git Base（注只需输入$后面命令即可）&lt;br&gt;&lt;img src=&quot;/images/git.jpg&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;输入安装Hexo命令：  &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ npm install hexo-cli -g      
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装完成后执行初始化&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ hexo init
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装依赖包  &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm install
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;让程序在本地跑起来，在E:\hexo(你所创建的文件夹)内执行以下命令&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ hexo g
-$ hexo s
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后用刘浏览器访问&lt;a href=&quot;http://localhost:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000/&lt;/a&gt;，如果你可以看到一个Hexo的博客页面,表明你博客在本地的部署成功了，会不会心里有点小激动，不得不说Node.js真的强大。（网页图片为下图）&lt;br&gt;&lt;img src=&quot;/images/hexo.png&quot; alt=&quot;Alt text&quot;&gt;  &lt;/p&gt;
+&lt;h1 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h1&gt;&lt;p&gt;安装前先介绍几个hexo常用的命令,#后面为注释。&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo g #完整命令为hexo generate,用于生成静态文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo d #完整命令为hexo deploy,用于将本地文件发布到github上&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo n #完整命令为hexo new,用于新建一篇文章&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;创建一个文件夹，然后右键文件夹，如我Hexo文件夹位置为E:\hexo，选择Git Base（注只需输入$后面命令即可）&lt;br&gt;&lt;img src=&quot;/images/git.jpg&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;输入安装Hexo命令：&lt;br&gt;     &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-cli -g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;安装完成后执行初始化&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;安装依赖包&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;让程序在本地跑起来，在E:\hexo(你所创建的文件夹)内执行以下命令&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后用刘浏览器访问&lt;a href=&quot;http://localhost:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000/&lt;/a&gt;，如果你可以看到一个Hexo的博客页面,表明你博客在本地的部署成功了，会不会心里有点小激动，不得不说Node.js真的强大。（网页图片为下图）&lt;br&gt;&lt;img src=&quot;/images/hexo.png&quot; alt=&quot;Alt text&quot;&gt;  &lt;/p&gt;
 &lt;h1 id=&quot;发表文章&quot;&gt;&lt;a href=&quot;#发表文章&quot; class=&quot;headerlink&quot; title=&quot;发表文章&quot;&gt;&lt;/a&gt;发表文章&lt;/h1&gt;&lt;p&gt;1.在Git Bash执行命令：$ hexo new “my new post”&lt;br&gt;2.在E:\hexo\source_post中打开my-new-post.md，打开方式使用记事本或notepad++。&lt;br&gt;hexo中写文章使用的是&lt;code&gt;Markdown&lt;/code&gt;，没接触过的可以看下&lt;a href=&quot;http://wowubuntu.com/markdown/#p&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown&lt;/a&gt;  &lt;/p&gt;
 &lt;h1 id=&quot;部署至Github&quot;&gt;&lt;a href=&quot;#部署至Github&quot; class=&quot;headerlink&quot; title=&quot;部署至Github&quot;&gt;&lt;/a&gt;部署至Github&lt;/h1&gt;&lt;p&gt;如果还没有Github账号，首先进入&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github&lt;/a&gt;  进行注册。&lt;/p&gt;
 &lt;h1 id=&quot;创建repository&quot;&gt;&lt;a href=&quot;#创建repository&quot; class=&quot;headerlink&quot; title=&quot;创建repository&quot;&gt;&lt;/a&gt;创建repository&lt;/h1&gt;&lt;p&gt;repository相当于一个仓库，用来放置你的代码文件。首先进入&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github&lt;/a&gt;，新创建一个repository（如下图）&lt;br&gt;&lt;img src=&quot;/images/repositories.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;创建时，只需要填写&lt;code&gt;Repository name&lt;/code&gt;即可，这个名字格式必须为&lt;code&gt;youname.github.io&lt;/code&gt;(注这个&lt;code&gt;youname&lt;/code&gt;必须为你&lt;code&gt;github&lt;/code&gt;的登录账号)，如我的为&lt;code&gt;sd63534790.github.io&lt;/code&gt;（如下图）&lt;br&gt;&lt;img src=&quot;/images/create.png&quot; alt=&quot;Alt text&quot;&gt;  &lt;/p&gt;
-&lt;h1 id=&quot;利用Git部署文件到Github&quot;&gt;&lt;a href=&quot;#利用Git部署文件到Github&quot; class=&quot;headerlink&quot; title=&quot;利用Git部署文件到Github&quot;&gt;&lt;/a&gt;利用Git部署文件到Github&lt;/h1&gt;&lt;p&gt;编辑前面在本机创建的hexo文件夹，（例如本机&lt;code&gt;E：\hexo&lt;/code&gt;）打开文件夹下的&lt;code&gt;_config.yml&lt;/code&gt;文件，在&lt;code&gt;_config.yml&lt;/code&gt;最下方，添加如下配置，命令中type参数设置为git，repository参数设置github仓库对应的HTTPS地址或者SSH地址。（具体如下图显示）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;deploy:
-type: git
-message: &amp;quot;&amp;quot;
-repo: 
-github: git@github.com:sd63534790/sd63534790.github.io.git,master
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&quot;/images/https.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;&lt;img src=&quot;/images/ssh.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;执行&lt;code&gt;HTTPS&lt;/code&gt;提交要求输入&lt;code&gt;github&lt;/code&gt;的账号和密码，执行&lt;code&gt;SSH&lt;/code&gt;提交需要输入SSH设置的密码，如果用SSH提交需要配置一下，具体方法在&lt;a href=&quot;http://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;window下配置SSH连接GitHub、GitHub配置ssh key&lt;/a&gt;。个人觉得用&lt;code&gt;SSH&lt;/code&gt;方式提交更为方便,可以不用设置账号密码。虽然配置稍微麻烦一些,长远的看这种方式还是更为方便。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ hexo g
-$ hexo d
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行HTTPS提交时，可能会要你输入用户名和密码，皆为注册Github时的数据，输入密码是不显示任何东西的，输入完毕回车即可。&lt;br&gt;如果使用过程中，遇到以下错误&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ERROR Deployer not found : github
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;则运行以下命令,或者你直接先运行这个命令更好。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ npm install hexo-deployer-git --save
-$ hexo g
-$ hexo d
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;此时，我们的博客已经搭建起来，并发布到Github上了，在浏览器访问&lt;code&gt;sd63534790.github.io&lt;/code&gt;就能看到自己的博客了。第一次访问刚地址，可能访问不了，您可以在几分钟后进行访问，一般不超过10分钟。  如果还访问不了，可能有一下几个原因：&lt;br&gt;1.github的邮箱没有进行认证,&lt;br&gt;2.确认下github仓库的Repository name是否是以github用户名+github.io命名。&lt;/p&gt;
+&lt;h1 id=&quot;利用Git部署文件到Github&quot;&gt;&lt;a href=&quot;#利用Git部署文件到Github&quot; class=&quot;headerlink&quot; title=&quot;利用Git部署文件到Github&quot;&gt;&lt;/a&gt;利用Git部署文件到Github&lt;/h1&gt;&lt;p&gt;编辑前面在本机创建的hexo文件夹，（例如本机&lt;code&gt;E：\hexo&lt;/code&gt;）打开文件夹下的&lt;code&gt;_config.yml&lt;/code&gt;文件，在&lt;code&gt;_config.yml&lt;/code&gt;最下方，添加如下配置，命令中type参数设置为git，repository参数设置github仓库对应的HTTPS地址或者SSH地址。（具体如下图显示）&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;deploy:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;type: git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;message: &amp;quot;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;repo: &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;github: git@github.com:sd63534790/sd63534790.github.io.git,master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/https.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;&lt;img src=&quot;/images/ssh.png&quot; alt=&quot;Alt text&quot;&gt;&lt;br&gt;执行&lt;code&gt;HTTPS&lt;/code&gt;提交要求输入&lt;code&gt;github&lt;/code&gt;的账号和密码，执行&lt;code&gt;SSH&lt;/code&gt;提交需要输入SSH设置的密码，如果用SSH提交需要配置一下，具体方法在&lt;a href=&quot;http://jingyan.baidu.com/article/a65957f4e91ccf24e77f9b11.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;window下配置SSH连接GitHub、GitHub配置ssh key&lt;/a&gt;。个人觉得用&lt;code&gt;SSH&lt;/code&gt;方式提交更为方便,可以不用设置账号密码。虽然配置稍微麻烦一些,长远的看这种方式还是更为方便。&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;执行HTTPS提交时，可能会要你输入用户名和密码，皆为注册Github时的数据，输入密码是不显示任何东西的，输入完毕回车即可。&lt;br&gt;如果使用过程中，遇到以下错误&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ERROR Deployer not found : github&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;则运行以下命令,或者你直接先运行这个命令更好。&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-deployer-git --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;此时，我们的博客已经搭建起来，并发布到Github上了，在浏览器访问&lt;code&gt;sd63534790.github.io&lt;/code&gt;就能看到自己的博客了。第一次访问刚地址，可能访问不了，您可以在几分钟后进行访问，一般不超过10分钟。  如果还访问不了，可能有一下几个原因：&lt;br&gt;1.github的邮箱没有进行认证,&lt;br&gt;2.确认下github仓库的Repository name是否是以github用户名+github.io命名。&lt;/p&gt;
 &lt;p&gt;#参考#&lt;br&gt;&lt;a href=&quot;http://opiece.me/2015/04/09/hexo-guide/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用Hexo搭建个人博客(基于hexo3.0)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;#总结#&lt;br&gt;由于本人刚开始写博客，肯定会有些错误，欢迎大家指正。后面的文章会继续介绍Hexo的使用，主要是主题设置、访问次数、多说评论等,如果有喜欢或者对你有帮助的朋友可以继续关注下。&lt;br&gt;本文主要介绍了搭建过程，但是如果您还是在搭建的过程中碰到了问题，欢迎您在下面留言探讨。&lt;/p&gt;
 </content>
@@ -349,12 +93,7 @@ $ hexo d
       &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;最近，自己刚刚接触Hexo，并用Hexo搭建了自己的博客，其中也上网参考了一些文章，但在搭建过程中还是遇到了一些问题。因此我觉得有必要写一些Hexo搭建的教程。主要是为了分享一下自己遇到的一些坑，也是对自己的一种积累。（其实最主要是增加下人气，热热场子哈哈~）用我的实际体验来说，你只要有点计算机基础的人，完全可以轻松使用Hexo搭建自己的博客。&lt;/p&gt;
 &lt;h1 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h1&gt;&lt;p&gt;这个教程目前只针对Window系统用户。&lt;/p&gt;
 &lt;h1 id=&quot;安装前提条件&quot;&gt;&lt;a href=&quot;#安装前提条件&quot; class=&quot;headerlink&quot; title=&quot;安装前提条件&quot;&gt;&lt;/a&gt;安装前提条件&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;&lt;br&gt;作用：Node.js用来创建Hexo博客框架&lt;br&gt;&lt;a href=&quot;https://git-scm.com/download/&quot;&gt;Git&lt;/a&gt;&lt;br&gt;作用：主要是管理代码工具，可以同步到Github及Coding，为部署及管理代码做准备&lt;/p&gt;
-&lt;h1 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h1&gt;&lt;p&gt;安装前先介绍几个hexo常用的命令,#后面为注释。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;hexo g #完整命令为hexo generate,用于生成静态文件
-hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览
-hexo d #完整命令为hexo deploy,用于将本地文件发布到github上
-hexo n #完整命令为hexo new,用于新建一篇文章
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h1&gt;&lt;p&gt;安装前先介绍几个hexo常用的命令,#后面为注释。&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo g #完整命令为hexo generate,用于生成静态文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo s #完整命令为hexo server,用于启动服务器，主要用来本地预览&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo d #完整命令为hexo deploy,用于将本地文件发布到github上&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo n #完整命令为hexo new,用于新建一篇文章&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     

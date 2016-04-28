@@ -3,11 +3,9 @@
 
 
     
-    
-    
   <url>
     <loc>http://www.cyemma.me/2016/04/27/Hexo-Two/</loc>
-    <lastmod>2016-04-28T06:30:54.007Z</lastmod>
+    <lastmod>2016-04-28T14:50:34.015Z</lastmod>
     <data>
         <display>
         <title>Hexo搭建（二）Next主题及第三方插件设置</title>
@@ -31,7 +29,7 @@
     
   <url>
     <loc>http://www.cyemma.me/2016/04/25/Hexo-One/</loc>
-    <lastmod>2016-04-27T12:09:00.229Z</lastmod>
+    <lastmod>2016-04-28T14:36:07.895Z</lastmod>
     <data>
         <display>
         <title>Hexo搭建（一）安装与配置</title>
@@ -48,6 +46,8 @@
     </data>
     </url>
 
+    
+    
     
   <url>
     <loc>http://www.cyemma.me/2016/04/23/HelloWorldHexo/</loc>

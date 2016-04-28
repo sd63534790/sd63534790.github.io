@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.cyemma.me/2016/04/27/Hexo-Two/</loc>
+    
+    <lastmod>2016-04-28T14:50:34.015Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.cyemma.me/2016/04/25/Hexo-One/</loc>
+    
+    <lastmod>2016-04-28T14:36:07.895Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.cyemma.me/about/index.html</loc>
     
     <lastmod>2016-04-28T06:47:58.800Z</lastmod>
@@ -12,20 +26,6 @@
     <loc>http://www.cyemma.me/categories/index.html</loc>
     
     <lastmod>2016-04-28T06:45:11.355Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.cyemma.me/2016/04/27/Hexo-Two/</loc>
-    
-    <lastmod>2016-04-28T06:30:54.007Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.cyemma.me/2016/04/25/Hexo-One/</loc>
-    
-    <lastmod>2016-04-27T12:09:00.229Z</lastmod>
     
   </url>
   

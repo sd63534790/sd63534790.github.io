@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://www.cyemma.me/images/hexo_two/count4.png">
 <meta property="og:image" content="http://www.cyemma.me/images/hexo_two/count5.png">
 <meta property="og:image" content="http://www.cyemma.me/images/hexo_two/count6.png">
-<meta property="og:updated_time" content="2016-04-28T06:30:54.007Z">
+<meta property="og:updated_time" content="2016-04-28T14:50:34.015Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建（二）Next主题及第三方插件设置">
 <meta name="twitter:description" content="前言Hexo支持很多扩展的主题，同时Github上面有大量的主题列表,有兴趣的朋友可以去了解下,我个人比较喜欢的是NexT主题,该主题的风格比较简单、大方。也是你们现在看到的主题风格。所以今天主要说一下关于该主题的配置及一些第三方插件的使用，或者你也可以直接查看NexT帮助文档，进行了解，文档写的算是比较详细的。">
@@ -329,258 +329,22 @@
 
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Hexo支持很多扩展的主题，同时Github上面有大量的<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">主题列表</a>,有兴趣的朋友可以去了解下,我个人比较喜欢的是<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">NexT</a>主题,该主题的风格比较简单、大方。也是你们现在看到的主题风格。所以今天主要说一下关于该主题的配置及一些第三方插件的使用，或者你也可以直接查看<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">NexT</a>帮助文档，进行了解，文档写的算是比较详细的。<br><a id="more"></a></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="利用git将NexT主题下载到本地"><a href="#利用git将NexT主题下载到本地" class="headerlink" title="利用git将NexT主题下载到本地"></a>利用git将NexT主题下载到本地</h2><p>进入自己博客存放主题目录（例如<code>E:\myblog\themes\</code>）,右键选择git bash，执行以下命令</p>
-<pre><code>$ git clone https://github.com/iissnan/hexo-theme-next.git
-</code></pre><h2 id="修改主站点的配置文件"><a href="#修改主站点的配置文件" class="headerlink" title="修改主站点的配置文件"></a>修改主站点的配置文件</h2><p>这里说的主站点配置文件是指博客的<code>_config.yml</code>文件，例如（<code>E:\myblog\_config.yml</code>）,讲<code>theme</code>的值修改为刚才下载的主题文件名</p>
-<pre><code>heme: hexo-theme-next
-</code></pre><h2 id="修改next主题的配置文件"><a href="#修改next主题的配置文件" class="headerlink" title="修改next主题的配置文件"></a>修改next主题的配置文件</h2><p>打开<code>E:\myblog\themes\next\_config.yml</code>，修改部分内容，此处分两部分</p>
-<h2 id="第一部分：需要修改"><a href="#第一部分：需要修改" class="headerlink" title="第一部分：需要修改"></a>第一部分：需要修改</h2><pre><code>favicon: /favicon.ico    #网站图标(收藏夹图标)，放在主题的source/文件夹下
-
-since: 2015#填写自己建博客的年份
-
-avatar: /images/avatar.jpg #侧边栏的头像，放在主题的/source/images/文件夹下
-
-swiftype_key: #填写swiftype代码中版本号前面的一串字符，如下图
-
-baidu_analytics: #百度统计id，即concise主题配置文件中的baidu_sid字段
-
-tencent_analytics: #腾讯统计id，即concise主题配置文件中的tencent_sid字段
-
-duoshuo_shortname: #多说评论标识  
-</code></pre><h2 id="tencent-sid和baidu-sid的值怎么获取？"><a href="#tencent-sid和baidu-sid的值怎么获取？" class="headerlink" title="tencent_sid和baidu_sid的值怎么获取？"></a>tencent_sid和baidu_sid的值怎么获取？</h2><p>在百度统计和腾讯分析注册帐号，新建站点后获取代码即可看到如下图的代码，红色部分即为tencent_sid和baidu_sid。<br><img src="/images/hexo_two/baidu.png" alt="Alt text"><br><img src="/images/hexo_two/tecent.png" alt="Alt text">GitHub</p>
-<h2 id="第二部分：选择修改"><a href="#第二部分：选择修改" class="headerlink" title="第二部分：选择修改"></a>第二部分：选择修改</h2><pre><code>menu:    #菜单栏，根据自己需要选择
-  home: /
-  #categories: /categories
-  #about: /about
-  archives: /archives
-  tags: /tags
-  #commonweal: /404.html
-menu_icons:
-  enable: true    #是否开启菜单栏图标，对面上面的菜单栏
-
-scheme: Muse    #提供了3种选择，是3种不同的样式，本人使用的是Mist
-
-#social:    #在右侧边栏中显示自己的社交超链接(github,facebook等)
-  #GitHub: sd63534790    #填写github的名字部分即可
-  #Others:
-social_icons:    #社交超链的小图标，对应上面的超链接
-  enable: true
-
-links_title: Links    #超链接的标题
-# links
-links:    
-  Cheny: http://cheny.csdn.net/v123411739    #超链接，Cheny为显示的名字
-
-leancloud_visitors:    #通过leancloud显示文章阅读次数，下文介绍怎么使用
-  enable: true    #是否开启
-  app_id: #应用id
-  app_key: #应用key
-</code></pre>  
-
-
-
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="利用git将NexT主题下载到本地"><a href="#利用git将NexT主题下载到本地" class="headerlink" title="利用git将NexT主题下载到本地"></a>利用git将NexT主题下载到本地</h2><p>进入自己博客存放主题目录（例如<code>E:\myblog\themes\</code>）,右键选择git bash，执行以下命令<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next.git</span><br></pre></td></tr></table></figure></p>
+<h2 id="修改主站点的配置文件"><a href="#修改主站点的配置文件" class="headerlink" title="修改主站点的配置文件"></a>修改主站点的配置文件</h2><p>这里说的主站点配置文件是指博客的<code>_config.yml</code>文件，例如（<code>E:\myblog\_config.yml</code>）,讲<code>theme</code>的值修改为刚才下载的主题文件名<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">heme: hexo-theme-next</span><br></pre></td></tr></table></figure></p>
+<h2 id="修改next主题的配置文件"><a href="#修改next主题的配置文件" class="headerlink" title="修改next主题的配置文件"></a>修改next主题的配置文件</h2><p>打开<code>E:\myblog\themes\next\_config.yml</code>，修改部分内容，此处分两部分</p>
+<h2 id="第一部分：需要修改"><a href="#第一部分：需要修改" class="headerlink" title="第一部分：需要修改"></a>第一部分：需要修改</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">favicon: /favicon.ico	#网站图标(收藏夹图标)，放在主题的source/文件夹下</span><br><span class="line"></span><br><span class="line">since: 2015#填写自己建博客的年份</span><br><span class="line"></span><br><span class="line">avatar: /images/avatar.jpg #侧边栏的头像，放在主题的/source/images/文件夹下</span><br><span class="line"></span><br><span class="line">swiftype_key: #填写swiftype代码中版本号前面的一串字符，如下图</span><br><span class="line"></span><br><span class="line">baidu_analytics: #百度统计id，即concise主题配置文件中的baidu_sid字段</span><br><span class="line"></span><br><span class="line">tencent_analytics: #腾讯统计id，即concise主题配置文件中的tencent_sid字段</span><br><span class="line"></span><br><span class="line">duoshuo_shortname: #多说评论标识</span><br></pre></td></tr></table></figure>
+<h2 id="tencent-sid和baidu-sid的值怎么获取？"><a href="#tencent-sid和baidu-sid的值怎么获取？" class="headerlink" title="tencent_sid和baidu_sid的值怎么获取？"></a>tencent_sid和baidu_sid的值怎么获取？</h2><p>在百度统计和腾讯分析注册帐号，新建站点后获取代码即可看到如下图的代码，红色部分即为tencent_sid和baidu_sid。<br><img src="/images/hexo_two/baidu.png" alt="Alt text"><br><img src="/images/hexo_two/tecent.png" alt="Alt text">GitHub</p>
+<h2 id="第二部分：选择修改"><a href="#第二部分：选择修改" class="headerlink" title="第二部分：选择修改"></a>第二部分：选择修改</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">menu:	#菜单栏，根据自己需要选择</span><br><span class="line">  home: /</span><br><span class="line">  #categories: /categories</span><br><span class="line">  #about: /about</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br><span class="line">  #commonweal: /404.html</span><br><span class="line">menu_icons:</span><br><span class="line">  enable: true	#是否开启菜单栏图标，对面上面的菜单栏</span><br><span class="line"></span><br><span class="line">scheme: Muse	#提供了3种选择，是3种不同的样式，本人使用的是Mist</span><br><span class="line"></span><br><span class="line">#social:	#在右侧边栏中显示自己的社交超链接(github,facebook等)</span><br><span class="line">  #GitHub: sd63534790	#填写github的名字部分即可</span><br><span class="line">  #Others:</span><br><span class="line">social_icons:	#社交超链的小图标，对应上面的超链接</span><br><span class="line">  enable: true</span><br><span class="line"></span><br><span class="line">links_title: Links	#超链接的标题</span><br><span class="line"># links</span><br><span class="line">links:	</span><br><span class="line">  Cheny: http://cheny.csdn.net/v123411739	#超链接，Cheny为显示的名字</span><br><span class="line"></span><br><span class="line">leancloud_visitors:	#通过leancloud显示文章阅读次数，下文介绍怎么使用</span><br><span class="line">  enable: true	#是否开启</span><br><span class="line">  app_id: #应用id</span><br><span class="line">  app_key: #应用key</span><br></pre></td></tr></table></figure>
 <h2 id="其他第三方插件"><a href="#其他第三方插件" class="headerlink" title="其他第三方插件"></a>其他第三方插件</h2><p>其他第三插件设置请看<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">官方文档说明</a>,个人觉得还是很详细的。有点需要注意，主题配置文件中，baidushare（百度分享）设置为true时无效，有知道的朋友可以帮忙讲解一下,所以我设置了duoshuo_share（多说分享）设置为true。  </p>
 <h2 id="通过leancloud显示文章阅读次数"><a href="#通过leancloud显示文章阅读次数" class="headerlink" title="通过leancloud显示文章阅读次数"></a>通过leancloud显示文章阅读次数</h2><p>1)进入leancloud官网注册一个用户<br>2)创建一个应用，名字随意<br>3)进入应用，选择存储一栏，点击数据旁边的小齿轮，选择创建Class<br><img src="/images/hexo_two/count.png" alt="Alt text"><br>4)在Class name一栏输入Counter后创建<br><img src="/images/hexo_two/count_two.png" alt="Alt text"><br>5）点击菜单栏中的设置，将应用URL填入自己的博客地址后保存，点击左侧应用Key一栏<br><img src="/images/hexo_two/count3.png" alt="Alt text"><br>6)将APP Id和APP Key复制，填入上文中主题配置文件中的的<code>app_id</code>和<code>app_key</code><br><img src="/images/hexo_two/count4.png" alt="Alt text"><br>7)重新部署发布博客，记录文章访问量的唯一标识符是文章的<code>发布日期</code>以及<code>文章的标题</code>，因此请确保这两个数值组合的唯一性，如果你更改了这两个数值，会造成文章阅读数值的清零重计<br>8)查看Counter，如果刚创建内容可能为空，去博客点一点文章这边就有内容了，<code>url</code>是唯一标识，不要乱改，如果想改请先查看官方文档，<code>time</code>是阅读次数，可以修改<br><img src="/images/hexo_two/count5.png" alt="Alt text"><br>9)为了确保该应用只在自己的博客上使用，添加web安全域名，填入自己博客域名，这样就只有自己的博客可以访问后台数据了<br><img src="/images/hexo_two/count6.png" alt="Alt text">  </p>
 <h2 id="首页文章阅读次数的显示"><a href="#首页文章阅读次数的显示" class="headerlink" title="首页文章阅读次数的显示"></a>首页文章阅读次数的显示</h2><p>目前NexT页面的统计技术由第三方不蒜子提供，但是不蒜子不能够在主页展示文章阅读量啊，对于我这种有点强迫的人实在有点忍不掉,又看到别的博主有实现这个功能，更不能忍了，参考网上资料，下面讲解下该功能如何实现。</p>
 <h3 id="配置leanCloud"><a href="#配置leanCloud" class="headerlink" title="配置leanCloud"></a>配置leanCloud</h3><p>首先需要完成leanCloud的设置，主要文章技术统计是根据leanCloud计算统计的，如果没有设置可以查看上文中leanCloud的设置。</p>
-<h3 id="lean-analytics-swig文件"><a href="#lean-analytics-swig文件" class="headerlink" title="lean-analytics.swig文件"></a>lean-analytics.swig文件</h3><p>在主题的 layout_scripts 路径下，新建一个 lean-analytics.swig 文件，并向里面添加以下内容：</p>
-<pre><code>&lt;!-- custom analytics part create by xiamo --&gt;
-&lt;script src=&quot;https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js&quot;&gt;&lt;/script&gt;
-
-&lt;script&gt;AV.initialize(&quot;{{theme.leancloud_visitors.app_id}}&quot;, &quot;{{theme.leancloud_visitors.app_key}}&quot;);&lt;/script&gt;
-&lt;script&gt;
-function showTime(Counter) {
-
-var query = new AV.Query(Counter);
-
-$(&quot;.leancloud_visitors&quot;).each(function() {
-
-    var url = $(this).attr(&quot;id&quot;).trim();
-
-    query.equalTo(&quot;url&quot;, url);
-
-    query.find({
-
-        success: function(results) {
-
-            if (results.length == 0) {
-
-                var content = $(document.getElementById(url)).text()+&apos; 0&apos;; 
-
-                $(document.getElementById(url)).text(content);
-
-                return;
-
-            }
-
-            for (var i = 0; i &lt; results.length; i++) {
-
-                var object = results[i];
-
-                var content = $(document.getElementById(url)).text()+&apos; &apos;+object.get(&apos;time&apos;);
-
-                $(document.getElementById(url)).text(content);
-
-            }
-
-        },
-
-        error: function(object, error) {
-
-            console.log(&quot;Error: &quot; + error.code + &quot; &quot; + error.message);
-
-        }
-
-    });
-
-
-
-});
-
-}
-
-
-
-function addCount(Counter) {
-
-var Counter = AV.Object.extend(&quot;Counter&quot;);
-
-url = $(&quot;.leancloud_visitors&quot;).attr(&apos;id&apos;).trim();
-
-title = $(&quot;.leancloud_visitors&quot;).attr(&apos;data-flag-title&apos;).trim();
-
-var query = new AV.Query(Counter);
-
-query.equalTo(&quot;url&quot;, url);
-
-query.find({
-
-    success: function(results) {
-
-        if (results.length &gt; 0) {
-
-            var counter = results[0];
-
-            counter.fetchWhenSave(true);
-
-            counter.increment(&quot;time&quot;);
-
-            counter.save(null, {
-
-                success: function(counter) {
-
-                    //var content =  counter.get(&apos;time&apos;) + &apos; &apos; + $(document.getElementById(url)).text();
-                    var content = $(document.getElementById(url)).text()+&apos; &apos;+counter.get(&apos;time&apos;);
-
-                    $(document.getElementById(url)).text(content);
-
-                },
-
-                error: function(counter, error) {
-
-                    console.log(&apos;Failed to save Visitor num, with error message: &apos; + error.message);
-
-                }
-
-            });
-
-        } else {
-
-            var newcounter = new Counter();
-
-            newcounter.set(&quot;title&quot;, title);
-
-            newcounter.set(&quot;url&quot;, url);
-
-            newcounter.set(&quot;time&quot;, 1);
-
-            newcounter.save(null, {
-
-                success: function(newcounter) {
-
-                    console.log(&quot;newcounter.get(&apos;time&apos;)=&quot;+newcounter.get(&apos;time&apos;));
-
-                    //var content = newcounter.get(&apos;time&apos;) + &apos; &apos; + $(document.getElementById(url)).text();
-
-                    var content = $(document.getElementById(url)).text()+&apos; &apos;+newcounter.get(&apos;time&apos;);
-
-                    $(document.getElementById(url)).text(content);
-
-                },
-
-                error: function(newcounter, error) {
-
-                    console.log(&apos;Failed to create&apos;);
-
-                }
-
-            });
-
-        }
-
-    },
-
-    error: function(error) {
-
-        console.log(&apos;Error:&apos; + error.code + &quot; &quot; + error.message);
-
-    }
-
-});
-
-}
-
-$(function() {
-
-var Counter = AV.Object.extend(&quot;Counter&quot;);
-
-if ($(&apos;.leancloud_visitors&apos;).length == 1) {
-
-    addCount(Counter);
-
-} else if ($(&apos;.post-title-link&apos;).length &gt; 1) {
-
-    showTime(Counter);
-
-}
-
-}); 
-
-
-&lt;/script&gt;
-</code></pre><h3 id="修改-post-swig-文件"><a href="#修改-post-swig-文件" class="headerlink" title="修改 post.swig 文件"></a>修改 post.swig 文件</h3><p>在主题的 layout_macro 路径下，打开 post.swig 文件，找到以下内容（大概88行）：</p>
-<pre><code>{% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %}
-    | <div class="fb-like" data-layout="button_count" data-share="true"></div>
-	{% endif %}
-</code></pre><p>在其后面添加如下内容（如果有存在类似的代码就不需要添加）：</p>
-<pre><code>{% if theme.leancloud_visitors.enable %}
-      	 <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
-              |   {{__('post.visitors')}}
-            </span>
-      {% endif %}
-</code></pre><p>添加完毕之后，文件内容像这个样子：</p>
-<pre><code>  {% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %}
-          |  
-        <div class="fb-like" data-layout="button_count" data-share="true"></div>
-      {% endif %}
-{% if theme.leancloud_visitors.enable %}  
-	<span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
-          |   {{__('post.visitors')}}
-        </span>
-	{% endif %}
-&lt;/div&gt;
-&lt;/header&gt;
-{% endif %}
-</code></pre><h3 id="修改-zh-Hans-yml-文件"><a href="#修改-zh-Hans-yml-文件" class="headerlink" title="修改 zh-Hans.yml 文件"></a>修改 zh-Hans.yml 文件</h3><p>在NexT目录的 languages 路径下的 zh-Hans.yml 文件，在 post: 结点下添加 visitors: 阅读次数 ，像这个样子：</p>
-<pre><code>post:
-    posted: 发表于
-    visitors: 阅读次数
-    updated: 更新于
-    in: 分类于
-    read_more: 阅读全文
-    untitled: 未命名
-    toc_empty: 此文章未包含目录
-</code></pre><p>#参考#<br><a href="http://opiece.me/2016/03/12/concise-to-next/" target="_blank" rel="external">使用Hexo搭建个人博客(基于hexo3.0)</a><br><a href="http://www.tuicool.com/articles/YB3EJnz/" target="_blank" rel="external">为NexT主题添加文章阅读量统计功能</a></p>
+<h3 id="lean-analytics-swig文件"><a href="#lean-analytics-swig文件" class="headerlink" title="lean-analytics.swig文件"></a>lean-analytics.swig文件</h3><p>在主题的 layout_scripts 路径下，新建一个 lean-analytics.swig 文件，并向里面添加以下内容：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- custom analytics part create by xiamo --&gt;</span><br><span class="line">&lt;script src=&quot;https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;AV.initialize(&quot;&#123;&#123;theme.leancloud_visitors.app_id&#125;&#125;&quot;, &quot;&#123;&#123;theme.leancloud_visitors.app_key&#125;&#125;&quot;);&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function showTime(Counter) &#123;</span><br><span class="line">var query = new AV.Query(Counter);</span><br><span class="line">$(&quot;.leancloud_visitors&quot;).each(function() &#123;</span><br><span class="line">	var url = $(this).attr(&quot;id&quot;).trim();</span><br><span class="line">	query.equalTo(&quot;url&quot;, url);</span><br><span class="line">	query.find(&#123;</span><br><span class="line">		success: function(results) &#123;</span><br><span class="line">			if (results.length == 0) &#123;</span><br><span class="line">				var content = $(document.getElementById(url)).text()+&apos; 0&apos;; </span><br><span class="line">				$(document.getElementById(url)).text(content);</span><br><span class="line">				return;</span><br><span class="line">			&#125;</span><br><span class="line">			for (var i = 0; i &lt; results.length; i++) &#123;</span><br><span class="line">				var object = results[i];</span><br><span class="line">				var content = $(document.getElementById(url)).text()+&apos; &apos;+object.get(&apos;time&apos;);</span><br><span class="line">				$(document.getElementById(url)).text(content);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		error: function(object, error) &#123;</span><br><span class="line">			console.log(&quot;Error: &quot; + error.code + &quot; &quot; + error.message);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function addCount(Counter) &#123;</span><br><span class="line">var Counter = AV.Object.extend(&quot;Counter&quot;);</span><br><span class="line">url = $(&quot;.leancloud_visitors&quot;).attr(&apos;id&apos;).trim();</span><br><span class="line">title = $(&quot;.leancloud_visitors&quot;).attr(&apos;data-flag-title&apos;).trim();</span><br><span class="line">var query = new AV.Query(Counter);</span><br><span class="line">query.equalTo(&quot;url&quot;, url);</span><br><span class="line">query.find(&#123;</span><br><span class="line">	success: function(results) &#123;</span><br><span class="line">		if (results.length &gt; 0) &#123;</span><br><span class="line">			var counter = results[0];</span><br><span class="line">			counter.fetchWhenSave(true);</span><br><span class="line">			counter.increment(&quot;time&quot;);</span><br><span class="line">			counter.save(null, &#123;</span><br><span class="line">				success: function(counter) &#123;</span><br><span class="line">					//var content =  counter.get(&apos;time&apos;) + &apos; &apos; + $(document.getElementById(url)).text();</span><br><span class="line">					var content = $(document.getElementById(url)).text()+&apos; &apos;+counter.get(&apos;time&apos;);</span><br><span class="line">					$(document.getElementById(url)).text(content);</span><br><span class="line">				&#125;,</span><br><span class="line">				error: function(counter, error) &#123;</span><br><span class="line">					console.log(&apos;Failed to save Visitor num, with error message: &apos; + error.message);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			var newcounter = new Counter();</span><br><span class="line">			newcounter.set(&quot;title&quot;, title);</span><br><span class="line">			newcounter.set(&quot;url&quot;, url);</span><br><span class="line">			newcounter.set(&quot;time&quot;, 1);</span><br><span class="line">			newcounter.save(null, &#123;</span><br><span class="line">				success: function(newcounter) &#123;</span><br><span class="line">				    console.log(&quot;newcounter.get(&apos;time&apos;)=&quot;+newcounter.get(&apos;time&apos;));</span><br><span class="line">					//var content = newcounter.get(&apos;time&apos;) + &apos; &apos; + $(document.getElementById(url)).text();</span><br><span class="line">					var content = $(document.getElementById(url)).text()+&apos; &apos;+newcounter.get(&apos;time&apos;);</span><br><span class="line">					$(document.getElementById(url)).text(content);</span><br><span class="line">				&#125;,</span><br><span class="line">				error: function(newcounter, error) &#123;</span><br><span class="line">					console.log(&apos;Failed to create&apos;);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	error: function(error) &#123;</span><br><span class="line">		console.log(&apos;Error:&apos; + error.code + &quot; &quot; + error.message);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br><span class="line">&#125;</span><br><span class="line">$(function() &#123;</span><br><span class="line">var Counter = AV.Object.extend(&quot;Counter&quot;);</span><br><span class="line">if ($(&apos;.leancloud_visitors&apos;).length == 1) &#123;</span><br><span class="line">	addCount(Counter);</span><br><span class="line">&#125; else if ($(&apos;.post-title-link&apos;).length &gt; 1) &#123;</span><br><span class="line">	showTime(Counter);</span><br><span class="line">&#125;</span><br><span class="line">&#125;); </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="修改-post-swig-文件"><a href="#修改-post-swig-文件" class="headerlink" title="修改 post.swig 文件"></a>修改 post.swig 文件</h3><p>在主题的 layout_macro 路径下，打开 post.swig 文件，找到以下内容（大概88行）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %&#125;</span><br><span class="line">| &lt;div class=&quot;fb-like&quot; data-layout=&quot;button_count&quot; data-share=&quot;true&quot;&gt;&lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在其后面添加如下内容（如果有存在类似的代码就不需要添加）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.leancloud_visitors.enable %&#125;</span><br><span class="line">  	 &lt;span id=&quot;&#123;&#123; url_for(post.path) &#125;&#125;&quot;class=&quot;leancloud_visitors&quot;  data-flag-title=&quot;&#123;&#123; post.title &#125;&#125;&quot;&gt;</span><br><span class="line">          |   &#123;&#123;__(&apos;post.visitors&apos;)&#125;&#125;</span><br><span class="line">        &lt;/span&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>添加完毕之后，文件内容像这个样子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %&#125;</span><br><span class="line">  |  </span><br><span class="line">&lt;div class=&quot;fb-like&quot; data-layout=&quot;button_count&quot; data-share=&quot;true&quot;&gt;&lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">&#123;% if theme.leancloud_visitors.enable %&#125;  </span><br><span class="line">&lt;span id=&quot;&#123;&#123; url_for(post.path) &#125;&#125;&quot;class=&quot;leancloud_visitors&quot;  data-flag-title=&quot;&#123;&#123; post.title &#125;&#125;&quot;&gt;</span><br><span class="line">  |   &#123;&#123;__(&apos;post.visitors&apos;)&#125;&#125;</span><br><span class="line">&lt;/span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/header&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="修改-zh-Hans-yml-文件"><a href="#修改-zh-Hans-yml-文件" class="headerlink" title="修改 zh-Hans.yml 文件"></a>修改 zh-Hans.yml 文件</h3><p>在NexT目录的 languages 路径下的 zh-Hans.yml 文件，在 post: 结点下添加 visitors: 阅读次数 ，像这个样子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">post:</span><br><span class="line">    posted: 发表于</span><br><span class="line">	visitors: 阅读次数</span><br><span class="line">	updated: 更新于</span><br><span class="line">	in: 分类于</span><br><span class="line">	read_more: 阅读全文</span><br><span class="line">	untitled: 未命名</span><br><span class="line">	toc_empty: 此文章未包含目录</span><br></pre></td></tr></table></figure></p>
+<p>#参考#<br><a href="http://opiece.me/2016/03/12/concise-to-next/" target="_blank" rel="external">使用Hexo搭建个人博客(基于hexo3.0)</a><br><a href="http://www.tuicool.com/articles/YB3EJnz/" target="_blank" rel="external">为NexT主题添加文章阅读量统计功能</a></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>其实Hexo主题搭建还是挺简单的,搭好自己的主题，大家就是开始写文章了，下一节主要讲一下同步到github和coding及绑定域名的方法，喜欢的朋友可以持续关注。<br>最后，如果你有什么问题或者想法可以在下方留言，我将尽力帮你解决。</p>
 
       
