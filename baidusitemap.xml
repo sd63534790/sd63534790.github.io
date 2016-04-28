@@ -3,12 +3,38 @@
 
 
     
+    
+    
   <url>
-    <loc>http://www.cyemma.me/2016/04/25/Hexo-One/</loc>
-    <lastmod>2016-04-25T16:44:18.216Z</lastmod>
+    <loc>http://www.cyemma.me/2016/04/27/Hexo-Two/</loc>
+    <lastmod>2016-04-28T06:30:54.007Z</lastmod>
     <data>
         <display>
-        <title>Hexo搭建（一）</title>
+        <title>Hexo搭建（二）Next主题及第三方插件设置</title>
+        <pubTime>2016-04-27T10:47:30.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Next</tag>
+         
+        <tag>第三方插件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="http://www.cyemma.me/categories/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.cyemma.me/2016/04/25/Hexo-One/</loc>
+    <lastmod>2016-04-27T12:09:00.229Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo搭建（一）安装与配置</title>
         <pubTime>2016-04-25T10:27:41.000Z</pubTime>
         
         <tag>Hexo</tag>
@@ -42,7 +68,6 @@
     </data>
     </url>
 
-    
     
     
 </urlset>

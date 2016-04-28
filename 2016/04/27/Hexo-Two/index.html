@@ -1,0 +1,1147 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo,Next,第三方插件," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Cheny's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="前言Hexo支持很多扩展的主题，同时Github上面有大量的主题列表,有兴趣的朋友可以去了解下,我个人比较喜欢的是NexT主题,该主题的风格比较简单、大方。也是你们现在看到的主题风格。所以今天主要说一下关于该主题的配置及一些第三方插件的使用，或者你也可以直接查看NexT帮助文档，进行了解，文档写的算是比较详细的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo搭建（二）Next主题及第三方插件设置">
+<meta property="og:url" content="http://www.cyemma.me/2016/04/27/Hexo-Two/index.html">
+<meta property="og:site_name" content="Cheny's Blog">
+<meta property="og:description" content="前言Hexo支持很多扩展的主题，同时Github上面有大量的主题列表,有兴趣的朋友可以去了解下,我个人比较喜欢的是NexT主题,该主题的风格比较简单、大方。也是你们现在看到的主题风格。所以今天主要说一下关于该主题的配置及一些第三方插件的使用，或者你也可以直接查看NexT帮助文档，进行了解，文档写的算是比较详细的。">
+<meta property="og:image" content="http://www.cyemma.me/images/hexo_two/baidu.png">
+<meta property="og:image" content="http://www.cyemma.me/images/hexo_two/tecent.png">
+<meta property="og:image" content="http://www.cyemma.me/images/hexo_two/count.png">
+<meta property="og:image" content="http://www.cyemma.me/images/hexo_two/count_two.png">
+<meta property="og:image" content="http://www.cyemma.me/images/hexo_two/count3.png">
+<meta property="og:image" content="http://www.cyemma.me/images/hexo_two/count4.png">
+<meta property="og:image" content="http://www.cyemma.me/images/hexo_two/count5.png">
+<meta property="og:image" content="http://www.cyemma.me/images/hexo_two/count6.png">
+<meta property="og:updated_time" content="2016-04-28T06:30:54.007Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo搭建（二）Next主题及第三方插件设置">
+<meta name="twitter:description" content="前言Hexo支持很多扩展的主题，同时Github上面有大量的主题列表,有兴趣的朋友可以去了解下,我个人比较喜欢的是NexT主题,该主题的风格比较简单、大方。也是你们现在看到的主题风格。所以今天主要说一下关于该主题的配置及一些第三方插件的使用，或者你也可以直接查看NexT帮助文档，进行了解，文档写的算是比较详细的。">
+<meta name="twitter:image" content="http://www.cyemma.me/images/hexo_two/baidu.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Hexo搭建（二）Next主题及第三方插件设置 | Cheny's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?c1dd81f0edac46278fc7a38af48c3a2c";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Cheny's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">新的开始</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hexo搭建（二）Next主题及第三方插件设置
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-27T18:47:30+08:00" content="2016-04-27">
+              2016-04-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/27/Hexo-Two/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/27/Hexo-Two/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+		  
+		  
+		  &nbsp; | &nbsp;
+	      <span id="/2016/04/27/Hexo-Two/"class="leancloud_visitors" data-flag-title="Hexo搭建（二）Next主题及第三方插件设置">
+          &nbsp;阅读次数
+          </span>
+		  
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Hexo支持很多扩展的主题，同时Github上面有大量的<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">主题列表</a>,有兴趣的朋友可以去了解下,我个人比较喜欢的是<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">NexT</a>主题,该主题的风格比较简单、大方。也是你们现在看到的主题风格。所以今天主要说一下关于该主题的配置及一些第三方插件的使用，或者你也可以直接查看<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">NexT</a>帮助文档，进行了解，文档写的算是比较详细的。<br><a id="more"></a></p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="利用git将NexT主题下载到本地"><a href="#利用git将NexT主题下载到本地" class="headerlink" title="利用git将NexT主题下载到本地"></a>利用git将NexT主题下载到本地</h2><p>进入自己博客存放主题目录（例如<code>E:\myblog\themes\</code>）,右键选择git bash，执行以下命令</p>
+<pre><code>$ git clone https://github.com/iissnan/hexo-theme-next.git
+</code></pre><h2 id="修改主站点的配置文件"><a href="#修改主站点的配置文件" class="headerlink" title="修改主站点的配置文件"></a>修改主站点的配置文件</h2><p>这里说的主站点配置文件是指博客的<code>_config.yml</code>文件，例如（<code>E:\myblog\_config.yml</code>）,讲<code>theme</code>的值修改为刚才下载的主题文件名</p>
+<pre><code>heme: hexo-theme-next
+</code></pre><h2 id="修改next主题的配置文件"><a href="#修改next主题的配置文件" class="headerlink" title="修改next主题的配置文件"></a>修改next主题的配置文件</h2><p>打开<code>E:\myblog\themes\next\_config.yml</code>，修改部分内容，此处分两部分</p>
+<h2 id="第一部分：需要修改"><a href="#第一部分：需要修改" class="headerlink" title="第一部分：需要修改"></a>第一部分：需要修改</h2><pre><code>favicon: /favicon.ico    #网站图标(收藏夹图标)，放在主题的source/文件夹下
+
+since: 2015#填写自己建博客的年份
+
+avatar: /images/avatar.jpg #侧边栏的头像，放在主题的/source/images/文件夹下
+
+swiftype_key: #填写swiftype代码中版本号前面的一串字符，如下图
+
+baidu_analytics: #百度统计id，即concise主题配置文件中的baidu_sid字段
+
+tencent_analytics: #腾讯统计id，即concise主题配置文件中的tencent_sid字段
+
+duoshuo_shortname: #多说评论标识  
+</code></pre><h2 id="tencent-sid和baidu-sid的值怎么获取？"><a href="#tencent-sid和baidu-sid的值怎么获取？" class="headerlink" title="tencent_sid和baidu_sid的值怎么获取？"></a>tencent_sid和baidu_sid的值怎么获取？</h2><p>在百度统计和腾讯分析注册帐号，新建站点后获取代码即可看到如下图的代码，红色部分即为tencent_sid和baidu_sid。<br><img src="/images/hexo_two/baidu.png" alt="Alt text"><br><img src="/images/hexo_two/tecent.png" alt="Alt text">GitHub</p>
+<h2 id="第二部分：选择修改"><a href="#第二部分：选择修改" class="headerlink" title="第二部分：选择修改"></a>第二部分：选择修改</h2><pre><code>menu:    #菜单栏，根据自己需要选择
+  home: /
+  #categories: /categories
+  #about: /about
+  archives: /archives
+  tags: /tags
+  #commonweal: /404.html
+menu_icons:
+  enable: true    #是否开启菜单栏图标，对面上面的菜单栏
+
+scheme: Muse    #提供了3种选择，是3种不同的样式，本人使用的是Mist
+
+#social:    #在右侧边栏中显示自己的社交超链接(github,facebook等)
+  #GitHub: sd63534790    #填写github的名字部分即可
+  #Others:
+social_icons:    #社交超链的小图标，对应上面的超链接
+  enable: true
+
+links_title: Links    #超链接的标题
+# links
+links:    
+  Cheny: http://cheny.csdn.net/v123411739    #超链接，Cheny为显示的名字
+
+leancloud_visitors:    #通过leancloud显示文章阅读次数，下文介绍怎么使用
+  enable: true    #是否开启
+  app_id: #应用id
+  app_key: #应用key
+</code></pre>  
+
+
+
+<h2 id="其他第三方插件"><a href="#其他第三方插件" class="headerlink" title="其他第三方插件"></a>其他第三方插件</h2><p>其他第三插件设置请看<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">官方文档说明</a>,个人觉得还是很详细的。有点需要注意，主题配置文件中，baidushare（百度分享）设置为true时无效，有知道的朋友可以帮忙讲解一下,所以我设置了duoshuo_share（多说分享）设置为true。  </p>
+<h2 id="通过leancloud显示文章阅读次数"><a href="#通过leancloud显示文章阅读次数" class="headerlink" title="通过leancloud显示文章阅读次数"></a>通过leancloud显示文章阅读次数</h2><p>1)进入leancloud官网注册一个用户<br>2)创建一个应用，名字随意<br>3)进入应用，选择存储一栏，点击数据旁边的小齿轮，选择创建Class<br><img src="/images/hexo_two/count.png" alt="Alt text"><br>4)在Class name一栏输入Counter后创建<br><img src="/images/hexo_two/count_two.png" alt="Alt text"><br>5）点击菜单栏中的设置，将应用URL填入自己的博客地址后保存，点击左侧应用Key一栏<br><img src="/images/hexo_two/count3.png" alt="Alt text"><br>6)将APP Id和APP Key复制，填入上文中主题配置文件中的的<code>app_id</code>和<code>app_key</code><br><img src="/images/hexo_two/count4.png" alt="Alt text"><br>7)重新部署发布博客，记录文章访问量的唯一标识符是文章的<code>发布日期</code>以及<code>文章的标题</code>，因此请确保这两个数值组合的唯一性，如果你更改了这两个数值，会造成文章阅读数值的清零重计<br>8)查看Counter，如果刚创建内容可能为空，去博客点一点文章这边就有内容了，<code>url</code>是唯一标识，不要乱改，如果想改请先查看官方文档，<code>time</code>是阅读次数，可以修改<br><img src="/images/hexo_two/count5.png" alt="Alt text"><br>9)为了确保该应用只在自己的博客上使用，添加web安全域名，填入自己博客域名，这样就只有自己的博客可以访问后台数据了<br><img src="/images/hexo_two/count6.png" alt="Alt text">  </p>
+<h2 id="首页文章阅读次数的显示"><a href="#首页文章阅读次数的显示" class="headerlink" title="首页文章阅读次数的显示"></a>首页文章阅读次数的显示</h2><p>目前NexT页面的统计技术由第三方不蒜子提供，但是不蒜子不能够在主页展示文章阅读量啊，对于我这种有点强迫的人实在有点忍不掉,又看到别的博主有实现这个功能，更不能忍了，参考网上资料，下面讲解下该功能如何实现。</p>
+<h3 id="配置leanCloud"><a href="#配置leanCloud" class="headerlink" title="配置leanCloud"></a>配置leanCloud</h3><p>首先需要完成leanCloud的设置，主要文章技术统计是根据leanCloud计算统计的，如果没有设置可以查看上文中leanCloud的设置。</p>
+<h3 id="lean-analytics-swig文件"><a href="#lean-analytics-swig文件" class="headerlink" title="lean-analytics.swig文件"></a>lean-analytics.swig文件</h3><p>在主题的 layout_scripts 路径下，新建一个 lean-analytics.swig 文件，并向里面添加以下内容：</p>
+<pre><code>&lt;!-- custom analytics part create by xiamo --&gt;
+&lt;script src=&quot;https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;AV.initialize(&quot;{{theme.leancloud_visitors.app_id}}&quot;, &quot;{{theme.leancloud_visitors.app_key}}&quot;);&lt;/script&gt;
+&lt;script&gt;
+function showTime(Counter) {
+
+var query = new AV.Query(Counter);
+
+$(&quot;.leancloud_visitors&quot;).each(function() {
+
+    var url = $(this).attr(&quot;id&quot;).trim();
+
+    query.equalTo(&quot;url&quot;, url);
+
+    query.find({
+
+        success: function(results) {
+
+            if (results.length == 0) {
+
+                var content = $(document.getElementById(url)).text()+&apos; 0&apos;; 
+
+                $(document.getElementById(url)).text(content);
+
+                return;
+
+            }
+
+            for (var i = 0; i &lt; results.length; i++) {
+
+                var object = results[i];
+
+                var content = $(document.getElementById(url)).text()+&apos; &apos;+object.get(&apos;time&apos;);
+
+                $(document.getElementById(url)).text(content);
+
+            }
+
+        },
+
+        error: function(object, error) {
+
+            console.log(&quot;Error: &quot; + error.code + &quot; &quot; + error.message);
+
+        }
+
+    });
+
+
+
+});
+
+}
+
+
+
+function addCount(Counter) {
+
+var Counter = AV.Object.extend(&quot;Counter&quot;);
+
+url = $(&quot;.leancloud_visitors&quot;).attr(&apos;id&apos;).trim();
+
+title = $(&quot;.leancloud_visitors&quot;).attr(&apos;data-flag-title&apos;).trim();
+
+var query = new AV.Query(Counter);
+
+query.equalTo(&quot;url&quot;, url);
+
+query.find({
+
+    success: function(results) {
+
+        if (results.length &gt; 0) {
+
+            var counter = results[0];
+
+            counter.fetchWhenSave(true);
+
+            counter.increment(&quot;time&quot;);
+
+            counter.save(null, {
+
+                success: function(counter) {
+
+                    //var content =  counter.get(&apos;time&apos;) + &apos; &apos; + $(document.getElementById(url)).text();
+                    var content = $(document.getElementById(url)).text()+&apos; &apos;+counter.get(&apos;time&apos;);
+
+                    $(document.getElementById(url)).text(content);
+
+                },
+
+                error: function(counter, error) {
+
+                    console.log(&apos;Failed to save Visitor num, with error message: &apos; + error.message);
+
+                }
+
+            });
+
+        } else {
+
+            var newcounter = new Counter();
+
+            newcounter.set(&quot;title&quot;, title);
+
+            newcounter.set(&quot;url&quot;, url);
+
+            newcounter.set(&quot;time&quot;, 1);
+
+            newcounter.save(null, {
+
+                success: function(newcounter) {
+
+                    console.log(&quot;newcounter.get(&apos;time&apos;)=&quot;+newcounter.get(&apos;time&apos;));
+
+                    //var content = newcounter.get(&apos;time&apos;) + &apos; &apos; + $(document.getElementById(url)).text();
+
+                    var content = $(document.getElementById(url)).text()+&apos; &apos;+newcounter.get(&apos;time&apos;);
+
+                    $(document.getElementById(url)).text(content);
+
+                },
+
+                error: function(newcounter, error) {
+
+                    console.log(&apos;Failed to create&apos;);
+
+                }
+
+            });
+
+        }
+
+    },
+
+    error: function(error) {
+
+        console.log(&apos;Error:&apos; + error.code + &quot; &quot; + error.message);
+
+    }
+
+});
+
+}
+
+$(function() {
+
+var Counter = AV.Object.extend(&quot;Counter&quot;);
+
+if ($(&apos;.leancloud_visitors&apos;).length == 1) {
+
+    addCount(Counter);
+
+} else if ($(&apos;.post-title-link&apos;).length &gt; 1) {
+
+    showTime(Counter);
+
+}
+
+}); 
+
+
+&lt;/script&gt;
+</code></pre><h3 id="修改-post-swig-文件"><a href="#修改-post-swig-文件" class="headerlink" title="修改 post.swig 文件"></a>修改 post.swig 文件</h3><p>在主题的 layout_macro 路径下，打开 post.swig 文件，找到以下内容（大概88行）：</p>
+<pre><code>{% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %}
+    | <div class="fb-like" data-layout="button_count" data-share="true"></div>
+	{% endif %}
+</code></pre><p>在其后面添加如下内容（如果有存在类似的代码就不需要添加）：</p>
+<pre><code>{% if theme.leancloud_visitors.enable %}
+      	 <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
+              |   {{__('post.visitors')}}
+            </span>
+      {% endif %}
+</code></pre><p>添加完毕之后，文件内容像这个样子：</p>
+<pre><code>  {% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %}
+          |  
+        <div class="fb-like" data-layout="button_count" data-share="true"></div>
+      {% endif %}
+{% if theme.leancloud_visitors.enable %}  
+	<span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
+          |   {{__('post.visitors')}}
+        </span>
+	{% endif %}
+&lt;/div&gt;
+&lt;/header&gt;
+{% endif %}
+</code></pre><h3 id="修改-zh-Hans-yml-文件"><a href="#修改-zh-Hans-yml-文件" class="headerlink" title="修改 zh-Hans.yml 文件"></a>修改 zh-Hans.yml 文件</h3><p>在NexT目录的 languages 路径下的 zh-Hans.yml 文件，在 post: 结点下添加 visitors: 阅读次数 ，像这个样子：</p>
+<pre><code>post:
+    posted: 发表于
+    visitors: 阅读次数
+    updated: 更新于
+    in: 分类于
+    read_more: 阅读全文
+    untitled: 未命名
+    toc_empty: 此文章未包含目录
+</code></pre><p>#参考#<br><a href="http://opiece.me/2016/03/12/concise-to-next/" target="_blank" rel="external">使用Hexo搭建个人博客(基于hexo3.0)</a><br><a href="http://www.tuicool.com/articles/YB3EJnz/" target="_blank" rel="external">为NexT主题添加文章阅读量统计功能</a></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>其实Hexo主题搭建还是挺简单的,搭好自己的主题，大家就是开始写文章了，下一节主要讲一下同步到github和coding及绑定域名的方法，喜欢的朋友可以持续关注。<br>最后，如果你有什么问题或者想法可以在下方留言，我将尽力帮你解决。</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+    <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onMouseOut="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/path/to/wechat-reward-image/wechat-reward-image.JPG" alt="cheny WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>微信打赏</p>
+      </div>
+    
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/path/to/alipay-reward-image/alipay-reward-image.JPG" alt="cheny Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>支付宝打赏</p>
+      </div>
+    
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+          
+            <a href="/tags/Next/" rel="tag">#Next</a>
+          
+            <a href="/tags/第三方插件/" rel="tag">#第三方插件</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/25/Hexo-One/" rel="next" title="Hexo搭建（一）安装与配置">
+                <i class="fa fa-chevron-left"></i> Hexo搭建（一）安装与配置
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/04/27/Hexo-Two/"
+     data-title="Hexo搭建（二）Next主题及第三方插件设置"
+     data-content=""
+     data-url="http://www.cyemma.me/2016/04/27/Hexo-Two/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+
+
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/27/Hexo-Two/"
+           data-title="Hexo搭建（二）Next主题及第三方插件设置" data-url="http://www.cyemma.me/2016/04/27/Hexo-Two/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="cheny" />
+          <p class="site-author-name" itemprop="name">cheny</p>
+          <p class="site-description motion-element" itemprop="description">做一个简单快乐的人</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/sd63534790" target="_blank" title="github">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1911689935" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#利用git将NexT主题下载到本地"><span class="nav-number">2.1.</span> <span class="nav-text">利用git将NexT主题下载到本地</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改主站点的配置文件"><span class="nav-number">2.2.</span> <span class="nav-text">修改主站点的配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改next主题的配置文件"><span class="nav-number">2.3.</span> <span class="nav-text">修改next主题的配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一部分：需要修改"><span class="nav-number">2.4.</span> <span class="nav-text">第一部分：需要修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tencent-sid和baidu-sid的值怎么获取？"><span class="nav-number">2.5.</span> <span class="nav-text">tencent_sid和baidu_sid的值怎么获取？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二部分：选择修改"><span class="nav-number">2.6.</span> <span class="nav-text">第二部分：选择修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他第三方插件"><span class="nav-number">2.7.</span> <span class="nav-text">其他第三方插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过leancloud显示文章阅读次数"><span class="nav-number">2.8.</span> <span class="nav-text">通过leancloud显示文章阅读次数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页文章阅读次数的显示"><span class="nav-number">2.9.</span> <span class="nav-text">首页文章阅读次数的显示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置leanCloud"><span class="nav-number">2.9.1.</span> <span class="nav-text">配置leanCloud</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lean-analytics-swig文件"><span class="nav-number">2.9.2.</span> <span class="nav-text">lean-analytics.swig文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-post-swig-文件"><span class="nav-number">2.9.3.</span> <span class="nav-text">修改 post.swig 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-zh-Hans-yml-文件"><span class="nav-number">2.9.4.</span> <span class="nav-text">修改 zh-Hans.yml 文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cheny</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"static01"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+<!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+
+<script>AV.initialize("L97401bz6Wa6WtBW9Lt6fFNW-gzGzoHsz", "9U9YWepuACHq5qc5T7FxsbAR");</script>
+<script>
+function showTime(Counter) {
+
+	var query = new AV.Query(Counter);
+
+	$(".leancloud_visitors").each(function() {
+
+		var url = $(this).attr("id").trim();
+
+		query.equalTo("url", url);
+
+		query.find({
+
+			success: function(results) {
+
+				if (results.length == 0) {
+
+					var content = $(document.getElementById(url)).text()+' 0'; 
+
+					$(document.getElementById(url)).text(content);
+
+					return;
+
+				}
+
+				for (var i = 0; i < results.length; i++) {
+
+					var object = results[i];
+
+					var content = $(document.getElementById(url)).text()+' '+object.get('time');
+
+					$(document.getElementById(url)).text(content);
+
+				}
+
+			},
+
+			error: function(object, error) {
+
+				console.log("Error: " + error.code + " " + error.message);
+
+			}
+
+		});
+
+
+
+	});
+
+}
+
+
+
+function addCount(Counter) {
+
+	var Counter = AV.Object.extend("Counter");
+
+	url = $(".leancloud_visitors").attr('id').trim();
+
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+
+	var query = new AV.Query(Counter);
+
+	query.equalTo("url", url);
+
+	query.find({
+
+		success: function(results) {
+
+			if (results.length > 0) {
+
+				var counter = results[0];
+
+				counter.fetchWhenSave(true);
+
+				counter.increment("time");
+
+				counter.save(null, {
+
+					success: function(counter) {
+
+						//var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+						var content = $(document.getElementById(url)).text()+' '+counter.get('time');
+
+						$(document.getElementById(url)).text(content);
+
+					},
+
+					error: function(counter, error) {
+
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+
+					}
+
+				});
+
+			} else {
+
+				var newcounter = new Counter();
+
+				newcounter.set("title", title);
+
+				newcounter.set("url", url);
+
+				newcounter.set("time", 1);
+
+				newcounter.save(null, {
+
+					success: function(newcounter) {
+
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+
+						//var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+
+						var content = $(document.getElementById(url)).text()+' '+newcounter.get('time');
+						
+						$(document.getElementById(url)).text(content);
+
+					},
+
+					error: function(newcounter, error) {
+
+						console.log('Failed to create');
+
+					}
+
+				});
+
+			}
+
+		},
+
+		error: function(error) {
+
+			console.log('Error:' + error.code + " " + error.message);
+
+		}
+
+	});
+
+}
+
+$(function() {
+
+	var Counter = AV.Object.extend("Counter");
+
+	if ($('.leancloud_visitors').length == 1) {
+
+		addCount(Counter);
+
+	} else if ($('.post-title-link').length > 1) {
+
+		showTime(Counter);
+
+	}
+
+}); 
+
+
+</script>
+
+
+
+
+
+  
+
+
+
+</body>
+</html>

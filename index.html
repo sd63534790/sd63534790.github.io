@@ -121,7 +121,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?ff86bc564e7e6a80b5bdcb762ea6d595";
+      hm.src = "//hm.baidu.com/hm.js?c1dd81f0edac46278fc7a38af48c3a2c";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -183,12 +183,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
             
-            归档
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -241,8 +251,134 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/27/Hexo-Two/" itemprop="url">
+                  Hexo搭建（二）Next主题及第三方插件设置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-27T18:47:30+08:00" content="2016-04-27">
+              2016-04-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/27/Hexo-Two/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/27/Hexo-Two/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+		  
+		  
+		  &nbsp; | &nbsp;
+	      <span id="/2016/04/27/Hexo-Two/"class="leancloud_visitors" data-flag-title="Hexo搭建（二）Next主题及第三方插件设置">
+          &nbsp;阅读次数
+          </span>
+		  
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Hexo支持很多扩展的主题，同时Github上面有大量的<a href="https://github.com/hexojs/hexo/wiki/Themes">主题列表</a>,有兴趣的朋友可以去了解下,我个人比较喜欢的是<a href="https://github.com/hexojs/hexo/wiki/Themes">NexT</a>主题,该主题的风格比较简单、大方。也是你们现在看到的主题风格。所以今天主要说一下关于该主题的配置及一些第三方插件的使用，或者你也可以直接查看<a href="https://github.com/hexojs/hexo/wiki/Themes">NexT</a>帮助文档，进行了解，文档写的算是比较详细的。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/27/Hexo-Two/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/25/Hexo-One/" itemprop="url">
-                  Hexo搭建（一）
+                  Hexo搭建（一）安装与配置
                 </a>
               
             
@@ -296,7 +432,7 @@
 		  
 		  
 		  &nbsp; | &nbsp;
-	      <span id="/2016/04/25/Hexo-One/"class="leancloud_visitors" data-flag-title="Hexo搭建（一）">
+	      <span id="/2016/04/25/Hexo-One/"class="leancloud_visitors" data-flag-title="Hexo搭建（一）安装与配置">
           &nbsp;阅读次数
           </span>
 		  
@@ -522,25 +658,25 @@ hexo n #完整命令为hexo new,用于新建一篇文章
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">2</span>
+            <a href="/">
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -86,7 +86,7 @@
 正文这个教程目前只针对Window系统用户。
 安">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo搭建（一）">
+<meta property="og:title" content="Hexo搭建（一）安装与配置">
 <meta property="og:url" content="http://www.cyemma.me/2016/04/25/Hexo-One/index.html">
 <meta property="og:site_name" content="Cheny's Blog">
 <meta property="og:description" content="前言最近，自己刚刚接触Hexo，并用Hexo搭建了自己的博客，其中也上网参考了一些文章，但在搭建过程中还是遇到了一些问题。因此我觉得有必要写一些Hexo搭建的教程。主要是为了分享一下自己遇到的一些坑，也是对自己的一种积累。（其实最主要是增加下人气，热热场子哈哈~）用我的实际体验来说，你只要有点计算机基础的人，完全可以轻松使用Hexo搭建自己的博客。
@@ -98,9 +98,9 @@
 <meta property="og:image" content="http://www.cyemma.me/images/create.png">
 <meta property="og:image" content="http://www.cyemma.me/images/https.png">
 <meta property="og:image" content="http://www.cyemma.me/images/ssh.png">
-<meta property="og:updated_time" content="2016-04-25T16:44:18.216Z">
+<meta property="og:updated_time" content="2016-04-27T12:09:00.229Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo搭建（一）">
+<meta name="twitter:title" content="Hexo搭建（一）安装与配置">
 <meta name="twitter:description" content="前言最近，自己刚刚接触Hexo，并用Hexo搭建了自己的博客，其中也上网参考了一些文章，但在搭建过程中还是遇到了一些问题。因此我觉得有必要写一些Hexo搭建的教程。主要是为了分享一下自己遇到的一些坑，也是对自己的一种积累。（其实最主要是增加下人气，热热场子哈哈~）用我的实际体验来说，你只要有点计算机基础的人，完全可以轻松使用Hexo搭建自己的博客。
 正文这个教程目前只针对Window系统用户。
 安">
@@ -122,7 +122,7 @@
   };
 </script>
 
-  <title> Hexo搭建（一） | Cheny's Blog </title>
+  <title> Hexo搭建（一）安装与配置 | Cheny's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -135,7 +135,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?ff86bc564e7e6a80b5bdcb762ea6d595";
+      hm.src = "//hm.baidu.com/hm.js?c1dd81f0edac46278fc7a38af48c3a2c";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -195,12 +195,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
             
-            归档
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -252,7 +262,7 @@
             
             
               
-                Hexo搭建（一）
+                Hexo搭建（一）安装与配置
               
             
           </h1>
@@ -305,7 +315,7 @@
 		  
 		  
 		  &nbsp; | &nbsp;
-	      <span id="/2016/04/25/Hexo-One/"class="leancloud_visitors" data-flag-title="Hexo搭建（一）">
+	      <span id="/2016/04/25/Hexo-One/"class="leancloud_visitors" data-flag-title="Hexo搭建（一）安装与配置">
           &nbsp;阅读次数
           </span>
 		  
@@ -340,9 +350,10 @@ hexo n #完整命令为hexo new,用于新建一篇文章
 </code></pre><p>让程序在本地跑起来，在E:\hexo(你所创建的文件夹)内执行以下命令</p>
 <pre><code>$ hexo g
 $ hexo s
-</code></pre><p>然后用刘浏览器访问<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>，如果你可以看到一个Hexo的博客页面,表明你博客在本地的部署成功了，会不会心里有点小激动，不得不说Node.js真的强大。（网页图片为下图）<br><img src="/images/hexo.png" alt="Alt text">      </p>
+</code></pre><p>然后用刘浏览器访问<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>，如果你可以看到一个Hexo的博客页面,表明你博客在本地的部署成功了，会不会心里有点小激动，不得不说Node.js真的强大。（网页图片为下图）<br><img src="/images/hexo.png" alt="Alt text">  </p>
+<h1 id="发表文章"><a href="#发表文章" class="headerlink" title="发表文章"></a>发表文章</h1><p>1.在Git Bash执行命令：$ hexo new “my new post”<br>2.在E:\hexo\source_post中打开my-new-post.md，打开方式使用记事本或notepad++。<br>hexo中写文章使用的是<code>Markdown</code>，没接触过的可以看下<a href="http://wowubuntu.com/markdown/#p" target="_blank" rel="external">Markdown</a>  </p>
 <h1 id="部署至Github"><a href="#部署至Github" class="headerlink" title="部署至Github"></a>部署至Github</h1><p>如果还没有Github账号，首先进入<a href="https://github.com/" target="_blank" rel="external">Github</a>  进行注册。</p>
-<h1 id="创建repository"><a href="#创建repository" class="headerlink" title="创建repository"></a>创建repository</h1><p>repository相当于一个仓库，用来放置你的代码文件。首先进入<a href="https://github.com/" target="_blank" rel="external">Github</a>，新创建一个repository（如下图）<br><img src="/images/repositories.png" alt="Alt text"><br>创建时，只需要填写<code>Repository name</code>即可，这个名字格式必须为<code>youname.github.io</code>(注这个<code>youname</code>必须为你<code>github</code>的登录账号)，如果我的为<code>sd63534790.github.io</code>（如下图）<br><img src="/images/create.png" alt="Alt text">  </p>
+<h1 id="创建repository"><a href="#创建repository" class="headerlink" title="创建repository"></a>创建repository</h1><p>repository相当于一个仓库，用来放置你的代码文件。首先进入<a href="https://github.com/" target="_blank" rel="external">Github</a>，新创建一个repository（如下图）<br><img src="/images/repositories.png" alt="Alt text"><br>创建时，只需要填写<code>Repository name</code>即可，这个名字格式必须为<code>youname.github.io</code>(注这个<code>youname</code>必须为你<code>github</code>的登录账号)，如我的为<code>sd63534790.github.io</code>（如下图）<br><img src="/images/create.png" alt="Alt text">  </p>
 <h1 id="利用Git部署文件到Github"><a href="#利用Git部署文件到Github" class="headerlink" title="利用Git部署文件到Github"></a>利用Git部署文件到Github</h1><p>编辑前面在本机创建的hexo文件夹，（例如本机<code>E：\hexo</code>）打开文件夹下的<code>_config.yml</code>文件，在<code>_config.yml</code>最下方，添加如下配置，命令中type参数设置为git，repository参数设置github仓库对应的HTTPS地址或者SSH地址。（具体如下图显示）</p>
 <pre><code>deploy:
 type: git
@@ -419,6 +430,10 @@ $ hexo d
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2016/04/27/Hexo-Two/" rel="prev" title="Hexo搭建（二）Next主题及第三方插件设置">
+                Hexo搭建（二）Next主题及第三方插件设置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -433,7 +448,7 @@ $ hexo d
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2016/04/25/Hexo-One/"
-     data-title="Hexo搭建（一）"
+     data-title="Hexo搭建（一）安装与配置"
      data-content=""
      data-url="http://www.cyemma.me/2016/04/25/Hexo-One/">
   <div class="ds-share-inline">
@@ -466,7 +481,7 @@ $ hexo d
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/04/25/Hexo-One/"
-           data-title="Hexo搭建（一）" data-url="http://www.cyemma.me/2016/04/25/Hexo-One/">
+           data-title="Hexo搭建（一）安装与配置" data-url="http://www.cyemma.me/2016/04/25/Hexo-One/">
       </div>
     
   </div>
@@ -510,25 +525,25 @@ $ hexo d
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">2</span>
+            <a href="/">
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -584,7 +599,7 @@ $ hexo d
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装前提条件"><span class="nav-number">3.</span> <span class="nav-text">安装前提条件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Hexo"><span class="nav-number">4.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署至Github"><span class="nav-number">5.</span> <span class="nav-text">部署至Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建repository"><span class="nav-number">6.</span> <span class="nav-text">创建repository</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用Git部署文件到Github"><span class="nav-number">7.</span> <span class="nav-text">利用Git部署文件到Github</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装前提条件"><span class="nav-number">3.</span> <span class="nav-text">安装前提条件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Hexo"><span class="nav-number">4.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#发表文章"><span class="nav-number">5.</span> <span class="nav-text">发表文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署至Github"><span class="nav-number">6.</span> <span class="nav-text">部署至Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建repository"><span class="nav-number">7.</span> <span class="nav-text">创建repository</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用Git部署文件到Github"><span class="nav-number">8.</span> <span class="nav-text">利用Git部署文件到Github</span></a></li></ol></div>
             
           </div>
         </section>
