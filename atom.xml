@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cyemma.me/"/>
-  <updated>2016-04-28T14:50:34.015Z</updated>
+  <updated>2017-02-07T13:20:03.405Z</updated>
   <id>http://www.cyemma.me/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿里巴巴 Java 开发手册</title>
+    <link href="http://www.cyemma.me/2017/02/02/Alibaba-Java-Code-Style/"/>
+    <id>http://www.cyemma.me/2017/02/02/Alibaba-Java-Code-Style/</id>
+    <published>2017-02-02T10:27:41.000Z</published>
+    <updated>2017-02-07T13:20:03.405Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;阿里巴巴集团技术部首次向业界公开 Java 开发手册，总共五大章节，干货满满，大多数规约还有说明以及正、反代码实例，对于新手而言能从中学到很多知识。还有就是非常适合全公司推广，利于项目维护以及规范开发。&lt;br&gt; 一、编程规约&lt;br&gt;(一) 命名规约&lt;br&gt;(二) 常量定义&lt;br&gt;(三) 格式规约&lt;br&gt;(四) OOP 规约&lt;br&gt;(五) 集合处理&lt;br&gt;(六) 并发处理&lt;br&gt;(七) 控制语句&lt;br&gt;(八) 注释规约&lt;br&gt;(九) 其它&lt;br&gt;二、异常日志&lt;br&gt;(一) 异常处理&lt;br&gt;(二) 日志规约&lt;br&gt;三、MYSQL 规约&lt;br&gt;(一) 建表规约&lt;br&gt;(二) 索引规约&lt;br&gt;(三) SQL 规约&lt;br&gt;(四) ORM 规约&lt;br&gt;四、工程规约&lt;br&gt;(一) 应用分层&lt;br&gt;(二) 二方库规约&lt;br&gt;(三) 服务器规约&lt;br&gt;五、安全规约&lt;br&gt;&lt;a href=&quot;https://img.hacpai.com/file/2017/1/eb0998bac7664496b2f1af98e07b08e5-Java.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PDF下载地址&lt;/a&gt;  &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;阿里巴巴集团技术部首次向业界公开 Java 开发手册，总共五大章节，干货满满，大多数规约还有说明以及正、反代码实例，对于新手而言能从中学到很
+    
+    </summary>
+    
+      <category term="Java" scheme="http://www.cyemma.me/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://www.cyemma.me/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo搭建（二）Next主题及第三方插件设置</title>
